@@ -1,5 +1,3 @@
-## Olá, sou o Marcelo!
-
 ## Sobre mim
 
 Estagiário de Dados, especializado em automação, web scraping, cálculos de preço de títulos de renda fixa e construção de curva ETTJ.
