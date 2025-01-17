@@ -1,17 +1,21 @@
 ## Sobre mim
 
-Estagiário de Dados, especializado em automação, web scraping, cálculos de preço de títulos de renda fixa e construção de curva ETTJ.
+Estagiário de Dados, especializado em web scraping, automatização e renda fixa quant.
 
 ## Experiência
 
-* Criação de API Rest;
-* ETL/ELT com Python, SQL Server e Airflow/Rundeck;
-* Otimização de queries;
-* Atualização de projetos legado para versões novas da linguagem;
-* Modelagem numérica de matrizes 2D e 3D;
-* Versionamento de código com GitLab;
-* Dockerização de aplicações para construção de pipeline CI;
-* Storytelling para demandas de marketing sobre Renda Fixa.
+* Dados/Dev:
+  * Criação de API Rest;
+  * ETL/ELT com Python, SQL Server e Airflow/Rundeck;
+  * Modelagem de banco de dados relacional;
+  * Versionamento de código com GitHub e GitLab;
+  * Otimização e automatização de processos;
+  * Dockerização de aplicações.
+* Finanças:
+  * Precificação de títulos de renda fixa;
+  * Interpolação da curva de juros.
+* Aplicações de métodos numéricos:
+  * Foco na migração geofísica de matrizes 2D com o método das diferenças finitas (MDF).
 
 <br>
 <div> 
