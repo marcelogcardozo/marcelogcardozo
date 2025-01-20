@@ -5,8 +5,8 @@ Estagiário de Dados, especializado em web scraping, automatização e renda fix
 ## Experiência
 
 * Dados/Dev:
+  * ETL/ELT com Python, SQL Server/Postgres e Airflow/Rundeck;
   * Criação de API Rest;
-  * ETL/ELT com Python, SQL Server e Airflow/Rundeck;
   * Modelagem de banco de dados relacional;
   * Versionamento de código com GitHub e GitLab;
   * Otimização e automatização de processos;
