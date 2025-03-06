@@ -1,6 +1,6 @@
 ## Sobre mim
 
-Estagiário de Dados, especializado em web scraping, automatização e renda fixa quant.
+Analista de Dados, especializado em web scraping, automatização e otimização de fluxos de dados e renda fixa quant.
 
 ## Experiência
 
@@ -20,5 +20,5 @@ Estagiário de Dados, especializado em web scraping, automatização e renda fix
 <br>
 <div> 
   <a href = "mailto:marcelo.cardozo.cg@gmail.com"><img src="https://img.shields.io/badge/-Gmail-%23333?style=for-the-badge&logo=gmail&logoColor=white" target="_blank"></a>
-  <a href="https://www.linkedin.com/in/marcelo-cardozo-312520187/" target="_blank"><img src="https://img.shields.io/badge/-LinkedIn-%230077B5?style=for-the-badge&logo=linkedin&logoColor=white" target="_blank"></a> 
+  <a href = "https://www.linkedin.com/in/marcelo-cardozo-312520187/" target="_blank"><img src="https://img.shields.io/badge/-LinkedIn-%230077B5?style=for-the-badge&logo=linkedin&logoColor=white" target="_blank"></a> 
 </div>
