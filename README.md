@@ -1,34 +1,30 @@
 ## Sobre mim
 
-Sou um **desenvolvedor fullstack com DNA em dados** e forte atuação em **finanças quantitativas** (especialmente em **renda fixa**). Tenho experiência na construção de sistemas robustos e escaláveis, seja para automação de pipelines, análise de ativos financeiros ou desenvolvimento de APIs e interfaces web.
-Meu foco é transformar dados complexos em valor acionável, com **código limpo** e **modelagem eficiente**.
+Sou **Software Engineer fullstack** com forte base em **dados e finanças quantitativas**, especialmente em **renda fixa**. Atuo no desenvolvimento de **sistemas, APIs e pipelines em produção**, unindo engenharia de software e modelagem matemática para transformar dados complexos em soluções práticas e escaláveis.
 
 ## Experiência
 
 ### 🧠 Dados & Desenvolvimento
 
-- Construção e orquestração de pipelines ETL/ELT com **Python**, **SQL Server/Postgres**, **Airflow** e **Rundeck**
-- Desenvolvimento de **aplicações fullstack** com back-end em **Python** e **Go**, e front-end com **VueJS**
-- Desenvolvimento de **APIs RESTful** com **FastAPI**, **Flask** e **Django**
-- Modelagem e manutenção de **bancos de dados relacionais** (SQL) 
-- **Versionamento de código** com GitHub/GitLab e workflows de CI  
-- **Containerização** com **Docker** de aplicações para ambientes escaláveis  
-- **Automatização e otimização** de fluxos e processos
+- Pipelines ETL/ELT com Python, SQL Server/PostgreSQL, Airflow e Rundeck  
+- Desenvolvimento de aplicações fullstack (back-end em Python e Go, front-end em Vue.js)  
+- APIs REST com FastAPI, Flask e Django  
+- Modelagem e manutenção de bancos de dados relacionais  
+- Versionamento, CI e automação de fluxos  
+- Containerização de aplicações com Docker  
 
 ### 💰 Finanças Quantitativas
 
-- Cálculo de **preço**, **taxa**, **duration** (Macaulay e modificada) de títulos públicos e privados
-- Modelagem e simulação de **curvas de juros** com técnicas de interpolação
-- Estimativa de **volatilidade implícita** em opções via Black-Scholes
-- Desenvolvimento de **calculadoras financeiras**, APIs e visualizações para análises de renda fixa
-- Forte domínio de **matemática financeira aplicada**
+- Precificação e métricas de renda fixa (preço, taxa, duration)  
+- Modelagem e simulação de curvas de juros  
+- Volatilidade implícita e opções (Black-Scholes)  
+- Desenvolvimento de calculadoras, APIs e visualizações financeiras  
 
 ### 🔬 Métodos Numéricos
 
-- Implementação de algoritmos com foco em **migração geofísica 2D**, usando **método das diferenças finitas** (MDF)
-- Aplicação de métodos numéricos e matemática computacional para **engenharia** e **finanças**
-- Simulações e modelos próprios para problemas de otimização, interpolação e precificação
-
+- Implementação de métodos numéricos (MDF) para simulações  
+- Aplicações em engenharia, finanças e otimização computacional
+  
 ---
 
 ## 📬 Contato
