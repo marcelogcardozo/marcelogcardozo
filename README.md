@@ -1,7 +1,7 @@
 Building scalable products at the intersection of software, data and finance.
 
 Software Engineer with a strong background in quantitative finance and data engineering.  
-I design and ship end-to-end systems, from APIs and pipelines to full platforms in production, turning complex problems into simple, usable software.
+I design and ship end-to-end systems, from APIs and pipelines to full platforms in production, turning complex problems into simple and usable softwares.
 
 Focused on real-world impact, clean architecture, and products that actually run.
 
