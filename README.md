@@ -7,7 +7,7 @@ Focused on real-world impact, clean architecture, and products that actually run
 
 ---
 
-<a href="https://marcelogcardozo.dev" target="_blank">
+<a href="https://marcelocardozo.dev" target="_blank">
   <img src="https://img.shields.io/badge/Website-000000?style=for-the-badge&logo=vercel&logoColor=white"/>
 </a>
 <a href="https://www.linkedin.com/in/marcelogcardozo/" target="_blank">
