@@ -7,12 +7,14 @@ import { Skills } from './components/sections/Skills';
 import { Education } from './components/sections/Education';
 import { Contact } from './components/sections/Contact';
 import { Footer } from './components/sections/Footer';
+import { Analytics } from '@vercel/analytics/react';
 
 function App() {
   return (
     <ThemeProvider>
       <LanguageProvider>
         <div className="min-h-screen bg-bg text-text transition-colors">
+          <Analytics />
           <main>
             <Hero />
             <Experience />
