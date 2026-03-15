@@ -1,0 +1,163 @@
+@import "tailwindcss";
+/* Tailwind v4: use class-based dark mode instead of media query */
+@custom-variant dark (&:where(.dark, .dark *));
+
+/* Theme tokens: light defaults + dark overrides */
+@theme {
+  /* Base surfaces */
+  --color-bg: #f7f8fb;          /* soft off-white with a hint of blue */
+  --color-bg-weak: #eef2f7;     /* light gray-blue for subtle gradients */
+  --color-surface: #ffffff;     /* cards and elevated surfaces */
+
+  /* Text */
+  --color-text: #0f172a;        /* slate-900 */
+  --color-muted: #475569;       /* slate-600/700 */
+
+  /* UI elements */
+  --color-border: #e5e7eb;      /* gray-200 */
+  --color-ring: #93c5fd;        /* blue-300 for focus rings */
+
+  /* Accents */
+  --color-accent: #2563eb;      /* blue-600 */
+  --color-accent-2: #7c3aed;    /* violet-600 */
+  --color-accent-soft: #e0e7ff; /* indigo-100 */
+
+  /* Semantic tokens (light mode) */
+  --surface: #ffffff;
+  --outline-soft: #e5e7eb;      /* gray-200 */
+  --outline-hover: #d1d5db;     /* gray-300 */
+  --outline-strong: #9ca3af;    /* gray-400 */
+  --accent: #2563eb;            /* blue-600 */
+  --accent-strong: #1d4ed8;     /* blue-700 - darker for CTAs */
+  --accent-2: #7c3aed;          /* violet-600 */
+  --tag-bg: #eff6ff;            /* blue-50 */
+  --tag-text: #1e40af;          /* blue-900 */
+  --tag-border: #bfdbfe;        /* blue-200 */
+  /* Badge tokens */
+  --badge-employment-bg: var(--tag-bg);
+  --badge-employment-text: var(--tag-text);
+  --badge-employment-border: var(--tag-border);
+  --badge-freelance-bg: #f5f3ff;    /* violet-50 */
+  --badge-freelance-text: #4c1d95;  /* violet-900 */
+  --badge-freelance-border: #ddd6fe;/* violet-200 */
+}
+
+@layer theme {
+  :root, :host {
+    @variant dark {
+      --color-bg: #0b1220;          /* deep navy */
+      --color-bg-weak: #111827;     /* gray-900 */
+      --color-surface: #0f172a;     /* slate-900 */
+
+      --color-text: #e5e7eb;        /* gray-200 */
+      --color-muted: #94a3b8;       /* slate-300 */
+
+      --color-border: #1f2937;      /* gray-800 */
+      --color-ring: #1d4ed8;        /* blue-700 */
+
+      --color-accent: #60a5fa;      /* blue-400 */
+      --color-accent-2: #a78bfa;    /* violet-400 */
+      --color-accent-soft: #111827; /* gray-900 */
+
+      /* Semantic tokens (dark mode) */
+      --surface: #0f172a;           /* slate-900 */
+      --outline-soft: #1f2937;      /* gray-800 */
+      --outline-hover: #374151;     /* gray-700 */
+      --outline-strong: #4b5563;    /* gray-600 */
+      --accent: #60a5fa;            /* blue-400 */
+      --accent-strong: #1e40af;     /* blue-800 - darker for CTAs in dark */
+      --accent-2: #a78bfa;          /* violet-400 */
+      --tag-bg: rgba(59, 130, 246, 0.15);
+      --tag-text: #bfdbfe;          /* blue-200 */
+      --tag-border: #1e3a8a;        /* blue-800 */
+      /* Badge tokens */
+      --badge-employment-bg: var(--tag-bg);
+      --badge-employment-text: var(--tag-text);
+      --badge-employment-border: var(--tag-border);
+      --badge-freelance-bg: rgba(139, 92, 246, 0.18);
+      --badge-freelance-text: #c4b5fd; /* violet-300 */
+      --badge-freelance-border: #4c1d95; /* violet-900 */
+    }
+  }
+}
+
+@layer base {
+  * {
+    border-color: theme('colors.gray.200');
+  }
+
+  html.dark * {
+    border-color: theme('colors.gray.700');
+  }
+
+  body {
+    font-family: 'Inter', system-ui, sans-serif;
+    font-feature-settings: "rlig" 1, "calt" 1;
+    /* Subtle gradient for light mode to avoid pure white UI */
+    background-image: linear-gradient(to bottom right, var(--color-bg), var(--color-bg-weak));
+    color: var(--color-text);
+  }
+  html.dark body {
+    background-image: linear-gradient(to bottom right, var(--color-bg), var(--color-bg-weak));
+    color: var(--color-text);
+  }
+}
+
+/* Component classes: Elevation & Border Scale */
+@layer components {
+  /* Base surface and borders */
+  .surface { @apply bg-[var(--surface)]; }
+  .border-soft { @apply border border-[var(--outline-soft)]; }
+  .hover-border-soft { @apply hover:border-[var(--outline-hover)]; }
+
+  /* Elevation scale */
+  .elevation-0 { @apply shadow-none; }
+  .elevation-1 { @apply shadow-sm; }
+  .elevation-2 { @apply shadow-md; }
+  .elevation-3 { @apply shadow-lg; }
+
+  /* Card presets - tokenized colors */
+  .card-section { @apply bg-[var(--surface)] border border-[var(--outline-soft)] rounded-xl shadow-none hover:shadow-sm hover:border-[var(--outline-hover)] transition-colors transition-shadow; }
+  .card-secondary { @apply bg-[var(--surface)] border border-[var(--outline-soft)] rounded-xl shadow-sm hover:shadow-md hover:border-[var(--outline-hover)] transition-colors transition-shadow; }
+  .card-primary { @apply bg-[var(--surface)] border border-[var(--outline-soft)] rounded-xl shadow-md hover:shadow-lg hover:border-[var(--outline-hover)] transition-colors transition-shadow; }
+
+  /* Typography scale */
+  .heading-display { @apply text-[48px] sm:text-[56px] md:text-[64px] font-bold tracking-[0.02em] text-gray-800 dark:text-white; }
+  .heading-section { @apply text-[32px] md:text-[36px] font-bold tracking-[0.015em] text-gray-800 dark:text-white; }
+  .heading-card { @apply text-[20px] font-semibold tracking-[0.01em] text-gray-800 dark:text-white; }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: rgb(243 244 246); /* gray-100 */
+}
+
+html.dark ::-webkit-scrollbar-track {
+  background-color: rgb(17 24 39); /* gray-900 */
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: rgb(209 213 219); /* gray-300 */
+  border-radius: 9999px;
+}
+
+html.dark ::-webkit-scrollbar-thumb {
+  background-color: rgb(55 65 81); /* gray-700 */
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: rgb(156 163 175); /* gray-400 */
+}
+
+html.dark ::-webkit-scrollbar-thumb:hover {
+  background-color: rgb(75 85 99); /* gray-600 */
+}
+
+/* Smooth scroll */
+html {
+  scroll-behavior: smooth;
+}
