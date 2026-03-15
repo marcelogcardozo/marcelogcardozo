@@ -8,6 +8,7 @@ import { Education } from './components/sections/Education';
 import { Contact } from './components/sections/Contact';
 import { Footer } from './components/sections/Footer';
 import { Analytics } from '@vercel/analytics/react';
+import { SpeedInsights } from '@vercel/speed-insights/react';
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
       <LanguageProvider>
         <div className="min-h-screen bg-bg text-text transition-colors">
           <Analytics />
+          <SpeedInsights />
           <main>
             <Hero />
             <Experience />
