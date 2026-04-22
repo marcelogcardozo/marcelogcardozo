@@ -10,4 +10,4 @@ Python · Next.js · PostgreSQL · AWS
 
 [![Portfolio](https://img.shields.io/badge/Portfolio-111111?style=flat&logo=googlechrome&logoColor=white)](https://marcelocardozo.dev)
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-111111?style=flat&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/marcelogcardozo/)
-[![Contact](https://img.shields.io/badge/Contact-111111?style=flat&logo=gmail&logoColor=white)](mailto:marcelo.cardozo.cg@gmail.com)
+[![Contact](https://img.shields.io/badge/Contact-111111?style=flat&logo=gmail&logoColor=white)](mailto:m.cardozocg@outlook.com)

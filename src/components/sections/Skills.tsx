@@ -71,9 +71,9 @@ export const Skills = () => {
                   {category}
                 </h3>
                 <div className="flex flex-wrap gap-2">
-                  {skillsList.map((skill, index) => (
+                  {skillsList.map((skill) => (
                     <motion.span
-                      key={index}
+                      key={skill}
                       variants={itemVariants}
                       initial="hidden"
                       whileInView="visible"

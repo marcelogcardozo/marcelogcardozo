@@ -1,5 +1,6 @@
 import { ThemeProvider } from './contexts/ThemeContext';
 import { LanguageProvider } from './contexts/LanguageContext';
+import { Navbar } from './components/Navbar';
 import { Hero } from './components/sections/Hero';
 import { Experience } from './components/sections/Experience';
 import { Projects } from './components/sections/Projects';
@@ -17,14 +18,15 @@ function App() {
         <div className="min-h-screen bg-bg text-text transition-colors">
           <Analytics />
           <SpeedInsights />
+          <Navbar />
           <main>
             <Hero />
             <Experience />
             <Projects />
             <Skills />
             <Education />
-          <Contact />
-          <Footer />
+            <Contact />
+            <Footer />
           </main>
         </div>
       </LanguageProvider>

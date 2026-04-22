@@ -39,10 +39,20 @@ export const translations = {
       title: "Desenvolvedor de Software",
       scrollDown: "Role para baixo",
     },
+    nav: {
+      experience: "Experiência",
+      projects: "Projetos",
+      skills: "Habilidades",
+      education: "Formação",
+      contact: "Contato",
+      backToTop: "Voltar ao topo",
+    },
     experience: {
       title: "Experiência Profissional",
       employmentTitle: "Empregos",
       freelanceTitle: "Projetos Freelance",
+      employmentLabel: "CLT",
+      freelanceLabel: "Freelance",
       viewDiagram: "Visualizar Diagrama",
       closeDiagram: "Fechar diagrama",
       employment: addIndexes(
@@ -69,10 +79,6 @@ export const translations = {
               "Handlebars",
               "Winston",
             ],
-            image:
-              "https://ginoterentim.com/wp-content/uploads/2023/04/logo-gino-site.png",
-            imageLight:
-              "https://ginoterentim.com/wp-content/uploads/2023/04/logo-gino-site.png",
           },
           {
             company: "Quantum Finance",
@@ -89,10 +95,6 @@ export const translations = {
               "Docker",
               "Git",
             ],
-            image:
-              "https://quantumfinance.com.br/wp-content/uploads/2020/09/logo-quantum.png",
-            imageLight:
-              "https://quantumfinance.com.br/wp-content/uploads/2020/09/logo-quantum.png",
           },
           {
             index: 1,
@@ -107,10 +109,6 @@ export const translations = {
               "Visualização",
               "Geofísica",
             ],
-            image:
-              "https://hub-digital.coppe.ufrj.br/wp-content/uploads/2021/10/logo-LAMCE.png",
-            imageLight:
-              "https://hub-digital.coppe.ufrj.br/wp-content/uploads/2021/10/logo-LAMCE.png",
           },
         ],
         "employment",
@@ -332,10 +330,20 @@ export const translations = {
       title: "Software Engineer",
       scrollDown: "Scroll down",
     },
+    nav: {
+      experience: "Experience",
+      projects: "Projects",
+      skills: "Skills",
+      education: "Education",
+      contact: "Contact",
+      backToTop: "Back to top",
+    },
     experience: {
       title: "Professional Experience",
       employmentTitle: "Employment",
       freelanceTitle: "Freelance Projects",
+      employmentLabel: "Employment",
+      freelanceLabel: "Freelance",
       viewDiagram: "View Diagram",
       closeDiagram: "Close diagram",
       employment: addIndexes(
@@ -362,10 +370,6 @@ export const translations = {
               "Handlebars",
               "Winston",
             ],
-            image:
-              "https://ginoterentim.com/wp-content/uploads/2023/04/logo-gino-site.png",
-            imageLight:
-              "https://ginoterentim.com/wp-content/uploads/2023/04/logo-gino-site.png",
           },
           {
             company: "Quantum Finance",
@@ -382,10 +386,6 @@ export const translations = {
               "Docker",
               "Git",
             ],
-            image:
-              "https://quantumfinance.com.br/wp-content/uploads/2020/09/logo-quantum.png",
-            imageLight:
-              "https://quantumfinance.com.br/wp-content/uploads/2020/09/logo-quantum.png",
           },
           {
             company: "Lab2M - LAMCE/COPPE/UFRJ",
@@ -399,10 +399,6 @@ export const translations = {
               "Visualization",
               "Geophysics",
             ],
-            image:
-              "https://hub-digital.coppe.ufrj.br/wp-content/uploads/2021/10/logo-LAMCE.png",
-            imageLight:
-              "https://hub-digital.coppe.ufrj.br/wp-content/uploads/2021/10/logo-LAMCE.png",
           },
         ],
         "employment",

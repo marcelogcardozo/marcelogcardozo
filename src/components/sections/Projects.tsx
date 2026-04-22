@@ -59,9 +59,9 @@ export const Projects = () => {
           viewport={{ once: true }}
           className="grid grid-cols-1 md:grid-cols-2 gap-6"
         >
-          {t.projects.projects.map((project, index) => (
+          {t.projects.projects.map((project) => (
               <motion.div
-                key={index}
+                key={project.title}
                 variants={itemVariants}
                 className="card-primary overflow-hidden"
               >
@@ -91,6 +91,7 @@ export const Projects = () => {
                   <div className="flex flex-wrap gap-3">
                     {project.url && (
                       <a
+                        key="url"
                         href={project.url}
                         target="_blank"
                         rel="noopener noreferrer"
@@ -102,6 +103,7 @@ export const Projects = () => {
                     )}
                     {project.git && !project.private && (
                       <a
+                        key="git"
                         href={project.git}
                         target="_blank"
                         rel="noopener noreferrer"
@@ -112,7 +114,7 @@ export const Projects = () => {
                       </a>
                     )}
                     {project.private && (
-                      <div className="flex items-center gap-2 px-3 py-1.5 bg-gray-200 dark:bg-gray-700 text-gray-500 dark:text-gray-400 rounded text-sm cursor-not-allowed">
+                      <div key="private" className="flex items-center gap-2 px-3 py-1.5 bg-gray-200 dark:bg-gray-700 text-gray-500 dark:text-gray-400 rounded text-sm cursor-not-allowed">
                         <Lock className="w-4 h-4" />
                         {t.projects.privateRepo}
                       </div>
