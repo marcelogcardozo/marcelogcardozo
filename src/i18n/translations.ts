@@ -163,21 +163,21 @@ export const translations = {
       privateRepo: "Repositório Privado",
       projects: [
         {
+          title: "Recalc",
+          description:
+            "Ferramenta web para análise de adensamento de solos com gráfico e × log σ'v, cálculo da tensão de pré-adensamento (Casagrande e Pacheco Silva), índices Cr/Cc/Cs, OCR e exportação de relatório em PDF.",
+          image: "/assets/recalc.png",
+          url: "https://recalc-solos.vercel.app/",
+          git: "",
+          private: false,
+        },
+        {
           title: "Migração Geofísica 2D",
           description:
             "Ferramenta para gerar sismogramas através da propagação de ondas acústicas em modelos geológicos de subsuperfície.",
           image: "/assets/migracao_sismica.png",
           url: "https://marcelogcardozo.github.io/migracao-sismica/",
           git: "https://github.com/marcelogcardozo/migracao-sismica",
-          private: false,
-        },
-        {
-          title: "Calculadora Tensão de Flambagem",
-          description:
-            "Ferramenta para calcular tensão de flambagem através do método da Secante e de Euler.",
-          image: "/assets/calculadora_tensao_critica.png",
-          url: "https://calculadora-tensao-critica.streamlit.app/",
-          git: "https://github.com/marcelogcardozo/calculadora-tensao-critica",
           private: false,
         },
         {
@@ -190,12 +190,12 @@ export const translations = {
           private: false,
         },
         {
-          title: "Recalc",
+          title: "Calculadora Tensão de Flambagem",
           description:
-            "Ferramenta web para análise de adensamento de solos com gráfico e × log σ'v, cálculo da tensão de pré-adensamento (Casagrande e Pacheco Silva), índices Cr/Cc/Cs, OCR e exportação de relatório em PDF.",
-          image: "/assets/recalc.png",
-          url: "https://recalc-solos.vercel.app/",
-          git: "",
+            "Ferramenta para calcular tensão de flambagem através do método da Secante e de Euler.",
+          image: "/assets/calculadora_tensao_critica.png",
+          url: "https://calculadora-tensao-critica.streamlit.app/",
+          git: "https://github.com/marcelogcardozo/calculadora-tensao-critica",
           private: false,
         },
         {
@@ -455,21 +455,21 @@ export const translations = {
       privateRepo: "Private Repository",
       projects: [
         {
+          title: "Recalc",
+          description:
+            "Web tool for soil consolidation analysis with an e × log σ'v chart, preconsolidation stress estimation (Casagrande and Pacheco Silva), Cr/Cc/Cs indexes, OCR, and PDF report export.",
+          image: "/assets/recalc.png",
+          url: "https://recalc-solos.vercel.app/",
+          git: "",
+          private: false,
+        },
+        {
           title: "2D Geophysical Migration",
           description:
             "Tool to generate seismograms through acoustic wave propagation in subsurface geological models.",
           image: "/assets/migracao_sismica.png",
           url: "https://marcelogcardozo.github.io/migracao-sismica/",
           git: "https://github.com/marcelogcardozo/migracao-sismica",
-          private: false,
-        },
-        {
-          title: "Buckling Stress Calculator",
-          description:
-            "Tool to calculate buckling stress using the Secant and Euler methods.",
-          image: "/assets/calculadora_tensao_critica.png",
-          url: "https://calculadora-tensao-critica.streamlit.app/",
-          git: "https://github.com/marcelogcardozo/calculadora-tensao-critica",
           private: false,
         },
         {
@@ -482,12 +482,12 @@ export const translations = {
           private: false,
         },
         {
-          title: "Recalc",
+          title: "Buckling Stress Calculator",
           description:
-            "Web tool for soil consolidation analysis with an e × log σ'v chart, preconsolidation stress estimation (Casagrande and Pacheco Silva), Cr/Cc/Cs indexes, OCR, and PDF report export.",
-          image: "/assets/recalc.png",
-          url: "https://recalc-solos.vercel.app/",
-          git: "",
+            "Tool to calculate buckling stress using the Secant and Euler methods.",
+          image: "/assets/calculadora_tensao_critica.png",
+          url: "https://calculadora-tensao-critica.streamlit.app/",
+          git: "https://github.com/marcelogcardozo/calculadora-tensao-critica",
           private: false,
         },
         {
