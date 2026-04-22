@@ -36,7 +36,7 @@ export const translations = {
   "pt-BR": {
     hero: {
       name: "Marcelo Cardozo",
-      title: "Engenheiro de Software",
+      title: "Desenvolvedor de Software",
       scrollDown: "Role para baixo",
     },
     experience: {
@@ -187,6 +187,15 @@ export const translations = {
           image: "/assets/fronteira_markowitz.png",
           url: "https://markowitz-frontier.streamlit.app/",
           git: "https://github.com/marcelogcardozo/markowitz-frontier",
+          private: false,
+        },
+        {
+          title: "Recalc",
+          description:
+            "Ferramenta web para análise de adensamento de solos com gráfico e × log σ'v, cálculo da tensão de pré-adensamento (Casagrande e Pacheco Silva), índices Cr/Cc/Cs, OCR e exportação de relatório em PDF.",
+          image: "/assets/recalc.png",
+          url: "https://recalc-solos.vercel.app/",
+          git: "",
           private: false,
         },
         {
@@ -470,6 +479,15 @@ export const translations = {
           image: "/assets/fronteira_markowitz.png",
           url: "https://markowitz-frontier.streamlit.app/",
           git: "https://github.com/marcelogcardozo/markowitz-frontier",
+          private: false,
+        },
+        {
+          title: "Recalc",
+          description:
+            "Web tool for soil consolidation analysis with an e × log σ'v chart, preconsolidation stress estimation (Casagrande and Pacheco Silva), Cr/Cc/Cs indexes, OCR, and PDF report export.",
+          image: "/assets/recalc.png",
+          url: "https://recalc-solos.vercel.app/",
+          git: "",
           private: false,
         },
         {
