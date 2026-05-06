@@ -2,9 +2,9 @@
 
 Software Engineer building data-intensive systems.
 
-I design and ship APIs, data pipelines and platforms from architecture to production with experience in high-complexity domains such as finance and education.
+I design and ship APIs, data pipelines, AI workflows and platforms from architecture to production with experience in high-complexity domains such as finance, legal and education.
 
-Python · Next.js · PostgreSQL · AWS
+Python · Next.js · SQL Server / PostgreSQL · MongoDB · AWS · LLM Orchestration
 
 ---
 
