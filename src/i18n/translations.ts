@@ -36,7 +36,7 @@ export const translations = {
   "pt-BR": {
     hero: {
       name: "Marcelo Cardozo",
-      title: "Desenvolvedor de Software",
+      title: "Engenheiro de Software",
       scrollDown: "Role para baixo",
     },
     nav: {
@@ -82,7 +82,7 @@ export const translations = {
           },
           {
             company: "Quantum Finance",
-            role: "Estagiário de Dados → Analista de Dados Jr.",
+            role: "Estagiário de Dados → Analista de Dados (Foco em Engenharia)",
             period: "Jun/2021 — Set/2025",
             description:
               "Desenvolvimento de 100+ scrapers financeiros (APIs, HTML, PDFs, XML) e estruturação de 30+ pipelines ETL com arquitetura medalhão para processamento de dados de mercado. Migração e orquestração de processos do Rundeck para Apache Airflow com dockerização, pipelines CI/CD no GitLab e DAGs de automação. Implementação de Change Data Capture (CDC) no SQL Server para rastreabilidade e consistência. Modelagem de curvas de juros (Nelson-Siegel, cubic spline, flat-forward) e cálculos de Renda Fixa (preço, taxa, duration de Macaulay, %CDI, VNA). Integração com fontes B3, ANBIMA, IBGE e CVM. Criação de framework Python que abstraiu operações de atualização de bases de dados.",
@@ -161,9 +161,18 @@ export const translations = {
       privateRepo: "Repositório Privado",
       projects: [
         {
+          title: "Processa AI",
+          description:
+            "SaaS de legaltech (descontinuado e liberado como open source sob AGPL-3.0) com gestão de escritório, ferramentas de IA, chat jurídico com RAG (pgvector + Gemini), calculadoras trabalhistas, billing via Stripe e portal do cliente. Monorepo com Vite 7 + React 19 no frontend, FastAPI assíncrono (Python 3.13 + psycopg 3) no backend e worker dedicado consumindo fila PostgreSQL.",
+          image: "/assets/processa_ai.png",
+          url: "",
+          git: "https://github.com/marcelogcardozo/processa-ai",
+          private: false,
+        },
+        {
           title: "Recalc",
           description:
-            "Ferramenta web para análise de adensamento de solos com gráfico e × log σ'v, cálculo da tensão de pré-adensamento (Casagrande e Pacheco Silva), índices Cr/Cc/Cs, OCR e exportação de relatório em PDF.",
+            "Ferramenta web para análise de adensamento de solos com gráfico e × log σ'v, cálculo da tensão de pré-adensamento (Casagrande e Pacheco Silva), índices Cr/Cc/Cs, OCR (razão de pré-adensamento) e exportação de relatório em PDF.",
           image: "/assets/recalc.png",
           url: "https://recalc-solos.vercel.app/",
           git: "",
@@ -224,6 +233,7 @@ export const translations = {
           "TypeScript",
           "Arquitetura de APIs",
           "Design de Sistemas",
+          "Microsserviços",
           "Clean Architecture",
           "SOLID",
           "Testes Automatizados",
@@ -232,6 +242,8 @@ export const translations = {
           "FastAPI",
           "Flask",
           "Django",
+          "Node.js",
+          "Express",
           "REST",
           "Integrações de APIs",
           "Autenticação",
@@ -242,15 +254,20 @@ export const translations = {
           "SQL Server",
           "PostgreSQL",
           "MongoDB",
-          "Pipelines de Dados",
+          "Redis",
+          "ETL",
           "CDC",
           "Apache Airflow",
           "Modelagem de Dados",
         ],
-        cloud: ["Docker", "AWS", "Azure", "CI/CD"],
-        frontend: ["React", "TypeScript", "Tailwind CSS", "Flutter"],
+        cloud: ["Docker", "AWS", "Azure", "Supabase", "Firebase", "CI/CD"],
+        frontend: ["React", "Next.js", "TypeScript", "Tailwind CSS", "Vite", "Flutter"],
         ai: [
           "Integração com LLMs (OpenAI, Mistral, Gemini)",
+          "LangChain",
+          "LangGraph",
+          "Langfuse",
+          "RAG",
           "n8n",
           "Flowise",
           "Sistemas com IA em Produção",
@@ -262,7 +279,7 @@ export const translations = {
       degree: {
         title: "Engenharia Civil",
         institution: "Universidade do Estado do Rio de Janeiro (UERJ)",
-        period: "Jan/2018 — Jul/2026 (Previsão)",
+        period: "Jan/2018 — Dez/2026 (Previsão)",
         description:
           "Foco em modelagem numérica, análise estrutural e aplicação de métodos computacionais para engenharia e dados.",
       },
@@ -373,7 +390,7 @@ export const translations = {
           },
           {
             company: "Quantum Finance",
-            role: "Data Intern → Junior Data Analyst",
+            role: "Data Intern → Data Analyst (Engineering Focus)",
             period: "Jun/2021 — Sep/2025",
             description:
               "Developed 100+ financial data scrapers (APIs, HTML, PDFs, XML) and structured 30+ ETL pipelines with medallion architecture for market data processing. Migrated and orchestrated processes from Rundeck to Apache Airflow with dockerization, CI/CD pipelines on GitLab, and automation DAGs. Implemented Change Data Capture (CDC) on SQL Server for traceability and consistency. Interest rate curve modeling (Nelson-Siegel, cubic spline, flat-forward) and Fixed Income calculations (price, rate, Macaulay duration, %CDI, VNA). Integration with B3, ANBIMA, IBGE, and CVM data sources. Created Python framework that abstracted database update operations.",
@@ -451,9 +468,18 @@ export const translations = {
       privateRepo: "Private Repository",
       projects: [
         {
+          title: "Processa AI",
+          description:
+            "Legal-tech SaaS (discontinued and released as open source under AGPL-3.0) with law-firm management, AI tools, legal chat with RAG (pgvector + Gemini), labor-law calculators, Stripe billing, and client portal. Monorepo with Vite 7 + React 19 on the frontend, async FastAPI (Python 3.13 + psycopg 3) on the backend, and a dedicated worker consuming a PostgreSQL queue.",
+          image: "/assets/processa_ai.png",
+          url: "",
+          git: "https://github.com/marcelogcardozo/processa-ai",
+          private: false,
+        },
+        {
           title: "Recalc",
           description:
-            "Web tool for soil consolidation analysis with an e × log σ'v chart, preconsolidation stress estimation (Casagrande and Pacheco Silva), Cr/Cc/Cs indexes, OCR, and PDF report export.",
+            "Web tool for soil consolidation analysis with an e × log σ'v chart, preconsolidation stress estimation (Casagrande and Pacheco Silva), Cr/Cc/Cs indexes, OCR (over-consolidation ratio), and PDF report export.",
           image: "/assets/recalc.png",
           url: "https://recalc-solos.vercel.app/",
           git: "",
@@ -514,6 +540,7 @@ export const translations = {
           "TypeScript",
           "API Architecture",
           "System Design",
+          "Microservices",
           "Clean Architecture",
           "SOLID",
           "Automated Testing",
@@ -522,6 +549,8 @@ export const translations = {
           "FastAPI",
           "Flask",
           "Django",
+          "Node.js",
+          "Express",
           "REST",
           "API Integrations",
           "Authentication",
@@ -532,15 +561,20 @@ export const translations = {
           "SQL Server",
           "PostgreSQL",
           "MongoDB",
-          "Data Pipelines",
+          "Redis",
+          "ETL",
           "CDC",
           "Apache Airflow",
           "Data Modeling",
         ],
-        cloud: ["Docker", "AWS", "Azure", "CI/CD"],
-        frontend: ["React", "TypeScript", "Tailwind CSS", "Flutter"],
+        cloud: ["Docker", "AWS", "Azure", "Supabase", "Firebase", "CI/CD"],
+        frontend: ["React", "Next.js", "TypeScript", "Tailwind CSS", "Vite", "Flutter"],
         ai: [
           "LLM Integration (OpenAI, Mistral, Gemini)",
+          "LangChain",
+          "LangGraph",
+          "Langfuse",
+          "RAG",
           "n8n",
           "Flowise",
           "AI Systems in Production",
@@ -552,7 +586,7 @@ export const translations = {
       degree: {
         title: "Civil Engineering",
         institution: "State University of Rio de Janeiro (UERJ)",
-        period: "Jan/2018 — Jul/2026 (Expected)",
+        period: "Jan/2018 — Dec/2026 (Expected)",
         description:
           "Focus on numerical modeling, structural analysis and application of computational methods for engineering and data.",
       },
