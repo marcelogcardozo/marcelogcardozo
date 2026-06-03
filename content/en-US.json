@@ -1,0 +1,346 @@
+{
+  "locale": "en-US",
+  "profile": {
+    "name": "Marcelo Cardozo",
+    "title": "Software Engineer",
+    "email": "m.cardozocg@outlook.com",
+    "location": "Rio de Janeiro, RJ",
+    "resumeUrl": "https://drive.google.com/file/d/1N30d3Yaanp868kqKbs1CXCvIERf06PRY/view?usp=sharing",
+    "social": [
+      {
+        "name": "GitHub",
+        "platform": "github",
+        "url": "https://github.com/marcelogcardozo",
+        "brandColor": "#181717"
+      },
+      {
+        "name": "LinkedIn",
+        "platform": "linkedin",
+        "url": "https://www.linkedin.com/in/marcelogcardozo/",
+        "brandColor": "#0A66C2"
+      },
+      {
+        "name": "Telegram",
+        "platform": "telegram",
+        "url": "https://t.me/marcelogcardozo",
+        "brandColor": "#26A5E4"
+      },
+      {
+        "name": "Spotify",
+        "platform": "spotify",
+        "url": "https://open.spotify.com/playlist/36HWjOt4ioMxItguUigmgN?si=a2ff50974e544fd0",
+        "brandColor": "#1DB954"
+      }
+    ]
+  },
+  "ui": {
+    "hero": {
+      "name": "Marcelo Cardozo",
+      "title": "Software Engineer",
+      "scrollDown": "Scroll down"
+    },
+    "nav": {
+      "experience": "Experience",
+      "projects": "Projects",
+      "skills": "Skills",
+      "education": "Education",
+      "contact": "Contact",
+      "backToTop": "Back to top"
+    }
+  },
+  "experience": {
+    "title": "Professional Experience",
+    "employmentTitle": "Employment",
+    "freelanceTitle": "Freelance Projects",
+    "employmentLabel": "Employment",
+    "freelanceLabel": "Freelance",
+    "viewDiagram": "View Diagram",
+    "closeDiagram": "Close diagram",
+    "employment": [
+      {
+        "index": 6,
+        "company": "Gino Terentim Business Development Academy",
+        "role": "Mid-Level Software Developer",
+        "period": "Oct/2025 — Present",
+        "description": "Fullstack development of gamified educational platform (Pionira) with AI tutor. Node.js/TypeScript backend on Express, deployed to Firebase Functions (stage) and containerized AWS Lambda (production). Implementation of JWT authentication, OpenAI Assistants API integration with response caching, PDF certificate generation with Handlebars, gamified shop system, and CI/CD pipelines (GitHub Actions). MongoDB database with Mongoose, transactional emails via Brevo, observability with Winston.",
+        "stack": [
+          "Node.js",
+          "TypeScript",
+          "Express",
+          "MongoDB",
+          "Mongoose",
+          "AWS Lambda",
+          "Firebase Functions",
+          "Docker",
+          "GitHub Actions",
+          "OpenAI API",
+          "JWT",
+          "Brevo",
+          "Handlebars",
+          "Winston"
+        ]
+      },
+      {
+        "index": 2,
+        "company": "Quantum Finance",
+        "role": "Data Intern → Data Analyst (Engineering Focus)",
+        "period": "Jun/2021 — Sep/2025",
+        "description": "Developed 100+ financial data scrapers (APIs, HTML, PDFs, XML) and structured 30+ ETL pipelines with medallion architecture for market data processing. Migrated and orchestrated processes from Rundeck to Apache Airflow with dockerization, CI/CD pipelines on GitLab, and automation DAGs. Implemented Change Data Capture (CDC) on SQL Server for traceability and consistency. Interest rate curve modeling (Nelson-Siegel, cubic spline, flat-forward) and Fixed Income calculations (price, rate, Macaulay duration, %CDI, VNA). Integration with B3, ANBIMA, IBGE, and CVM data sources. Created Python framework that abstracted database update operations.",
+        "stack": [
+          "Python",
+          "SQL Server",
+          "Airflow",
+          "FastAPI",
+          "ETL",
+          "Docker",
+          "Git"
+        ]
+      },
+      {
+        "index": 0,
+        "company": "Lab2M - LAMCE/COPPE/UFRJ",
+        "role": "Undergraduate Research Assistant",
+        "period": "Jul/2019 — Apr/2023",
+        "description": "Creation of 2D seismic migration simulators and interfaces for visualization of high-resolution geological models.",
+        "stack": [
+          "Python",
+          "Numerical Modeling",
+          "Visualization",
+          "Geophysics"
+        ]
+      }
+    ],
+    "freelance": [
+      {
+        "index": 5,
+        "company": "Private Project",
+        "role": "Fullstack Developer",
+        "period": "Jul/2025 — Oct/2025",
+        "description": "Development of educational platform implemented with microservices architecture. Responsible for building API Gateway in FastAPI for service orchestration, specialized Python microservices (authentication, AI-driven profile data generation and material adaptation), integration with Supabase (PostgreSQL + Auth + Storage), document processing pipeline with LaTeX-to-PDF conversion via xelatex, and integration with n8n workflows orchestrating language models (OpenAI GPT-4o for content generation and Google Gemini for image generation). Frontend in React 19 + TypeScript + Vite managing dynamic questionnaires, material visualization and complete pedagogical student characterization flow.",
+        "stack": [
+          "React",
+          "TypeScript",
+          "FastAPI",
+          "Supabase",
+          "LaTeX",
+          "Docker",
+          "Flowise/n8n",
+          "Mistral AI/OpenAI"
+        ],
+        "miro": "uXjVGGvjBFA="
+      },
+      {
+        "index": 3,
+        "company": "Portfolio Optimization Platform",
+        "role": "Fullstack Developer",
+        "period": "Feb/2025 — Jun/2025",
+        "description": "Development of web platform for financial portfolio optimization using Modern Portfolio Theory (Markowitz). Implementation of layered architecture (Views, Services, Infra) with complete registration flow (request, email confirmation, administrative approval), secure authentication system with password hashing and tokens, SendGrid integration for transactional emails with HTML templates, and efficient frontier calculation engine via Monte Carlo simulation.",
+        "stack": [
+          "Python",
+          "SQLAlchemy",
+          "Pandas",
+          "SendGrid",
+          "Streamlit",
+          "NumPy",
+          "Hashing",
+          "ORM"
+        ]
+      }
+    ]
+  },
+  "projects": {
+    "title": "Featured Projects",
+    "viewProject": "View Project",
+    "viewCode": "GitHub",
+    "privateRepo": "Private Repository",
+    "items": [
+      {
+        "title": "Processa AI",
+        "description": "Legal-tech SaaS (discontinued and released as open source under AGPL-3.0) with law-firm management, AI tools, legal chat with RAG (pgvector + Gemini), labor-law calculators, Stripe billing, and client portal. Monorepo with Vite 7 + React 19 on the frontend, async FastAPI (Python 3.13 + psycopg 3) on the backend, and a dedicated worker consuming a PostgreSQL queue.",
+        "image": "/assets/processa_ai.png",
+        "url": "",
+        "git": "https://github.com/marcelogcardozo/processa-ai",
+        "private": false
+      },
+      {
+        "title": "Recalc",
+        "description": "Web tool for soil consolidation analysis with an e × log σ'v chart, preconsolidation stress estimation (Casagrande and Pacheco Silva), Cr/Cc/Cs indexes, OCR (over-consolidation ratio), and PDF report export.",
+        "image": "/assets/recalc.png",
+        "url": "https://recalc-solos.vercel.app/",
+        "git": "",
+        "private": false
+      },
+      {
+        "title": "2D Geophysical Migration",
+        "description": "Tool to generate seismograms through acoustic wave propagation in subsurface geological models.",
+        "image": "/assets/migracao_sismica.png",
+        "url": "https://marcelogcardozo.github.io/migracao-sismica/",
+        "git": "https://github.com/marcelogcardozo/migracao-sismica",
+        "private": false
+      },
+      {
+        "title": "Markowitz Efficient Frontier",
+        "description": "Tool that performs optimization using Monte Carlo method to calculate the Markowitz efficient frontier for an asset portfolio.",
+        "image": "/assets/fronteira_markowitz.png",
+        "url": "https://markowitz-frontier.streamlit.app/",
+        "git": "https://github.com/marcelogcardozo/markowitz-frontier",
+        "private": false
+      },
+      {
+        "title": "Buckling Stress Calculator",
+        "description": "Tool to calculate buckling stress using the Secant and Euler methods.",
+        "image": "/assets/calculadora_tensao_critica.png",
+        "url": "https://calculadora-tensao-critica.streamlit.app/",
+        "git": "https://github.com/marcelogcardozo/calculadora-tensao-critica",
+        "private": false
+      },
+      {
+        "title": "Weather App",
+        "description": "Application to check the weekly weather, plus metrics like temperature, UV index, humidity, chance of rain and air quality.",
+        "image": "/assets/weather_app.png",
+        "url": "",
+        "git": "https://github.com/marcelogcardozo/weather-app",
+        "private": false
+      }
+    ]
+  },
+  "skills": {
+    "title": "Key Skills",
+    "categories": [
+      {
+        "key": "core",
+        "label": "Core Engineering",
+        "items": [
+          "Python",
+          "Go",
+          "TypeScript",
+          "API Architecture",
+          "System Design",
+          "Microservices",
+          "Clean Architecture",
+          "SOLID",
+          "Automated Testing"
+        ]
+      },
+      {
+        "key": "backend",
+        "label": "Backend & Platform",
+        "items": [
+          "FastAPI",
+          "Flask",
+          "Django",
+          "Node.js",
+          "Express",
+          "REST",
+          "API Integrations",
+          "Authentication",
+          "Access Control",
+          "Observability"
+        ]
+      },
+      {
+        "key": "data",
+        "label": "Data & Pipelines",
+        "items": [
+          "SQL Server",
+          "PostgreSQL",
+          "MongoDB",
+          "Redis",
+          "ETL",
+          "CDC",
+          "Apache Airflow",
+          "Data Modeling"
+        ]
+      },
+      {
+        "key": "cloud",
+        "label": "Cloud & Infra",
+        "items": ["Docker", "AWS", "Azure", "Supabase", "Firebase", "CI/CD"]
+      },
+      {
+        "key": "frontend",
+        "label": "Frontend",
+        "items": ["React", "Next.js", "TypeScript", "Tailwind CSS", "Vite", "Flutter"]
+      },
+      {
+        "key": "ai",
+        "label": "AI & Automation",
+        "items": [
+          "LLM Integration (OpenAI, Mistral, Gemini)",
+          "LangChain",
+          "LangGraph",
+          "Langfuse",
+          "RAG",
+          "n8n",
+          "Flowise",
+          "AI Systems in Production"
+        ]
+      }
+    ]
+  },
+  "education": {
+    "title": "Education & Certifications",
+    "degree": {
+      "title": "Civil Engineering",
+      "institution": "State University of Rio de Janeiro (UERJ)",
+      "period": "Jan/2018 — Dec/2026 (Expected)",
+      "description": "Focus on numerical modeling, structural analysis and application of computational methods for engineering and data."
+    },
+    "certifications": {
+      "title": "Certifications",
+      "list": [
+        {
+          "title": "Data Science Formation",
+          "provider": "Alura",
+          "year": "2022",
+          "url": "https://cursos.alura.com.br/degree/certificate/e11f4066-3536-42e6-adf2-d7c676711951?lang=pt_BR"
+        },
+        {
+          "title": "Data Engineering on AWS",
+          "provider": "Alura",
+          "year": "2022",
+          "url": "https://cursos.alura.com.br/certificate/93e59fdc-367e-41ca-a076-2d28e4ebe642?lang=pt_BR"
+        },
+        {
+          "title": "AI and Machine Learning — Complete Guide",
+          "provider": "Udemy",
+          "year": "2021",
+          "url": ""
+        },
+        {
+          "title": "Python 3 from Basics to Advanced",
+          "provider": "Udemy",
+          "year": "2021",
+          "url": ""
+        },
+        {
+          "title": "Fixed Income in Brazil",
+          "provider": "FCE — Finance School",
+          "year": "2025",
+          "url": "https://drive.google.com/file/d/1nqRSyJ6153qDoeZHXOkncHZELllBeCyI/preview"
+        },
+        {
+          "title": "Government Bonds Pricing Calculation",
+          "provider": "FCE — Finance School",
+          "year": "2024",
+          "url": "https://drive.google.com/file/d/1MHpiBQPmtx6_Irg_Y5mYpgec5Dw6MAX1/view?usp=sharing"
+        },
+        {
+          "title": "Interest Rate Curve Interpolation",
+          "provider": "FCE — Finance School",
+          "year": "2025",
+          "url": "https://drive.google.com/file/d/1EF5kjQnSNNh2OqkXkcwu9iQOqp-dYwOS/preview"
+        }
+      ]
+    }
+  },
+  "contact": {
+    "title": "Contact",
+    "subtitle": "Let's have a chat?",
+    "location": "Rio de Janeiro, RJ",
+    "email": "Send me a message",
+    "resume": "View resume",
+    "connect": "Connect with me",
+    "rights": "All rights reserved."
+  }
+}
