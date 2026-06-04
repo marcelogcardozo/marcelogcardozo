@@ -1,5 +1,5 @@
 import { motion, useReducedMotion } from 'framer-motion';
-import { ChevronDown, Moon, Sun, Globe } from 'lucide-react';
+import { Moon, Sun, Globe, Github, Linkedin, Mail, FileText, ChevronDown } from 'lucide-react';
 import { useLanguage } from '../../contexts/LanguageContext';
 import { useTheme } from '../../contexts/ThemeContext';
 
@@ -8,154 +8,101 @@ export const Hero = () => {
   const { theme, toggleTheme } = useTheme();
   const reduceMotion = useReducedMotion();
 
-  const scrollToNextSection = () => {
-    // Find the next <section> after the Hero and scroll to it
-    const hero = document.getElementById('home');
-    const sections = Array.from(document.querySelectorAll('section'));
-    const heroIndex = sections.indexOf(hero as HTMLElement);
+  const resumeUrl = language === 'en-US'
+    ? 'https://drive.google.com/file/d/1N30d3Yaanp868kqKbs1CXCvIERf06PRY/view?usp=sharing'
+    : 'https://drive.google.com/file/d/1no3_zVn6oGSYaiiK7nt-XztYyjyBFbm2/view?usp=sharing';
 
-    if (heroIndex !== -1 && heroIndex + 1 < sections.length) {
-      sections[heroIndex + 1].scrollIntoView({ behavior: 'smooth', block: 'start' });
-      return;
-    }
+  const quickLinks = [
+    { label: 'GitHub', href: 'https://github.com/marcelogcardozo', icon: Github },
+    { label: 'LinkedIn', href: 'https://www.linkedin.com/in/marcelogcardozo/', icon: Linkedin },
+    { label: 'Email', href: 'mailto:m.cardozocg@outlook.com', icon: Mail },
+    { label: t.contact.resume, href: resumeUrl, icon: FileText },
+  ];
 
-    // Fallback: scroll to Experience if order can't be determined
-    const fallback = document.querySelector('#experience') || document.querySelector('#projects');
-    fallback?.scrollIntoView({ behavior: 'smooth', block: 'start' });
-  };
+  const scrollToExperience = () =>
+    document.getElementById('experience')?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+
+  const ease = [0.22, 1, 0.36, 1] as const;
+  const rise = (delay: number) =>
+    reduceMotion
+      ? { initial: false as const }
+      : { initial: { opacity: 0, y: 12 }, animate: { opacity: 1, y: 0 }, transition: { duration: 0.6, ease, delay } };
 
   return (
-    <section
-      id="home"
-      className="min-h-screen flex items-center justify-center relative bg-gradient-to-br from-sky-50 via-indigo-50 to-violet-50 dark:from-gray-900 dark:via-gray-900 dark:to-gray-800 overflow-hidden"
-    >
-      {/* Animated background gradient */}
-      <div className="absolute inset-0 overflow-hidden">
-        <motion.div
-          animate={reduceMotion ? undefined : {
-            scale: [1, 1.15, 1],
-            rotate: [0, 60, 0],
-          }}
-          transition={reduceMotion ? undefined : {
-            duration: 40,
-            repeat: Infinity,
-            repeatDelay: 8,
-            ease: "linear",
-          }}
-          className="absolute -top-1/2 -right-1/2 w-full h-full bg-gradient-to-br from-blue-500/10 to-purple-500/10 dark:from-blue-500/10 dark:to-purple-500/10 rounded-full blur-xl sm:blur-3xl"
-        />
-        <motion.div
-          animate={reduceMotion ? undefined : {
-            scale: [1.1, 1, 1.1],
-            rotate: [45, 0, 45],
-          }}
-          transition={reduceMotion ? undefined : {
-            duration: 30,
-            repeat: Infinity,
-            repeatDelay: 6,
-            ease: "linear",
-          }}
-          className="absolute -bottom-1/2 -left-1/2 w-full h-full bg-gradient-to-tr from-purple-500/10 to-blue-500/10 dark:from-purple-500/10 dark:to-blue-500/10 rounded-full blur-xl sm:blur-3xl"
-        />
-      </div>
-
-      {/* Top-right buttons */}
-      <motion.div
-        initial={{ opacity: 0, y: -10 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.4 }}
-        className="absolute top-6 right-6 flex items-center space-x-2 z-10"
-      >
+    <section id="home" className="relative min-h-svh flex flex-col">
+      {/* Persistent controls */}
+      <div className="absolute top-5 right-5 flex items-center gap-1 z-10">
         <button
           onClick={toggleTheme}
-          className="p-2 rounded-md hover:bg-white/80 dark:hover:bg-gray-800/80 backdrop-blur-sm transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--accent)] focus-visible:ring-offset-2 focus-visible:ring-offset-[var(--surface)]"
+          className="p-2 rounded-md text-[var(--muted)] hover:text-[var(--text)] hover:bg-[var(--hover)] transition-colors ring-accent"
           aria-label="Toggle theme"
           aria-pressed={theme === 'dark'}
         >
-          {theme === 'dark' ? (
-            <Sun className="w-5 h-5 text-gray-300" />
-          ) : (
-            <Moon className="w-5 h-5 text-gray-700" />
-          )}
+          {theme === 'dark' ? <Sun className="w-[18px] h-[18px]" /> : <Moon className="w-[18px] h-[18px]" />}
         </button>
-
         <button
           onClick={toggleLanguage}
-          className="p-2 rounded-md hover:bg-white/80 dark:hover:bg-gray-800/80 backdrop-blur-sm transition-colors flex items-center space-x-1 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--accent)] focus-visible:ring-offset-2 focus-visible:ring-offset-[var(--surface)]"
+          className="px-2 py-2 rounded-md text-[var(--muted)] hover:text-[var(--text)] hover:bg-[var(--hover)] transition-colors flex items-center gap-1.5 ring-accent"
           aria-label="Toggle language"
         >
-          <Globe className="w-5 h-5 text-gray-700 dark:text-gray-300" />
-          <span className="text-xs font-medium text-gray-700 dark:text-gray-300">
-            {language === 'pt-BR' ? 'PT' : 'EN'}
-          </span>
+          <Globe className="w-[18px] h-[18px]" />
+          <span className="text-xs font-medium mono">{language === 'pt-BR' ? 'PT' : 'EN'}</span>
         </button>
-      </motion.div>
+      </div>
 
-      {/* Content */}
-      <div className="relative max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center z-10">
-        <motion.div
-          initial={{ opacity: 0, scale: 0.9 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.8, ease: "easeOut" }}
-        >
-          <motion.h1
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.2 }}
-            className="heading-display mb-8 bg-gradient-to-r from-gray-800 via-gray-700 to-gray-800 dark:from-white dark:via-gray-100 dark:to-white bg-clip-text text-transparent"
-          >
+      {/* Centered intro */}
+      <div className="flex-1 flex items-center">
+        <div className="container-wide w-full">
+          <motion.p {...rise(0)} className="kicker mb-5">
+            {t.contact.location}
+          </motion.p>
+
+          <motion.h1 {...rise(0.06)} className="heading-display text-balance">
             {t.hero.name}
           </motion.h1>
 
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.4 }}
-            className="relative"
-          >
-            <motion.div
-              animate={reduceMotion ? undefined : {
-                boxShadow: [
-                  "0 0 20px rgba(59, 130, 246, 0)",
-                  "0 0 36px rgba(59, 130, 246, 0.12)",
-                  "0 0 20px rgba(59, 130, 246, 0)",
-                ],
-              }}
-              transition={reduceMotion ? undefined : {
-                duration: 6,
-                repeat: Infinity,
-                repeatDelay: 2,
-                ease: "easeInOut",
-              }}
-              className="inline-block px-8 py-3 rounded-full bg-white/50 dark:bg-gray-800/50 backdrop-blur-md border border-gray-200/50 dark:border-gray-700/50"
-            >
-              <p className="text-2xl font-medium text-gray-800 dark:text-gray-200">
-                {t.hero.title}
-              </p>
-            </motion.div>
+          <motion.p {...rise(0.12)} className="mt-4 text-lg font-medium text-[var(--text)]">
+            {t.hero.title}
+          </motion.p>
+
+          <motion.p {...rise(0.18)} className="mt-5 text-base leading-relaxed text-[var(--muted)] max-w-prose text-pretty">
+            {t.hero.tagline}
+          </motion.p>
+
+          <motion.div {...rise(0.24)} className="mt-8 flex flex-wrap items-center gap-x-5 gap-y-2.5">
+            {quickLinks.map(({ label, href, icon: Icon }) => (
+              <a
+                key={label}
+                href={href}
+                target={href.startsWith('mailto:') ? undefined : '_blank'}
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-1.5 text-sm text-[var(--muted)] hover:text-[var(--accent)] transition-colors ring-accent"
+              >
+                <Icon className="w-4 h-4" />
+                {label}
+              </a>
+            ))}
           </motion.div>
-        </motion.div>
+        </div>
       </div>
 
-      {/* Scroll indicator */}
-      <motion.div
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ duration: 0.4, delay: 0.5 }}
-        className="absolute bottom-8 left-1/2 transform -translate-x-1/2"
-      >
+      {/* Scroll cue */}
+      <div className="container-wide w-full pb-8">
         <button
-          type="button"
-          onClick={scrollToNextSection}
-          className="flex flex-col items-center cursor-pointer opacity-60 hover:opacity-100 transition-opacity focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--accent)] focus-visible:ring-offset-2 focus-visible:ring-offset-[var(--surface)] rounded"
+          onClick={scrollToExperience}
+          className="inline-flex items-center gap-2 text-xs text-[var(--faint)] hover:text-[var(--muted)] transition-colors ring-accent mono uppercase tracking-widest"
           aria-label={t.hero.scrollDown}
         >
-          <ChevronDown className="w-5 h-5 text-gray-600 dark:text-gray-400" />
-          <span className="text-xs text-gray-600 dark:text-gray-400 mt-1">
-            {t.hero.scrollDown}
-          </span>
+          <motion.span
+            animate={reduceMotion ? undefined : { y: [0, 3, 0] }}
+            transition={reduceMotion ? undefined : { duration: 1.8, repeat: Infinity, ease: 'easeInOut' }}
+            className="inline-flex"
+          >
+            <ChevronDown className="w-4 h-4" />
+          </motion.span>
+          {t.hero.scrollDown}
         </button>
-      </motion.div>
+      </div>
     </section>
   );
 };

@@ -37,6 +37,8 @@ export const translations = {
     hero: {
       name: "Marcelo Cardozo",
       title: "Engenheiro de Software",
+      tagline:
+        "Construo plataformas de ponta a ponta, de pipelines de dados e APIs a interfaces e sistemas com IA em produção.",
       scrollDown: "Role para baixo",
     },
     nav: {
@@ -61,8 +63,14 @@ export const translations = {
             company: "Gino Terentim Academia de Desenvolvimento Empresarial",
             role: "Desenvolvedor de Software Pleno",
             period: "Out/2025 — Presente",
-            description:
-              "Desenvolvimento fullstack de plataforma educacional gamificada (Pionira) com tutor IA. Backend Node.js/TypeScript sobre Express, deployado em Firebase Functions (stage) e AWS Lambda containerizada (produção). Implementação de autenticação JWT, integração OpenAI Assistants API com cache de respostas, geração de certificados PDF com Handlebars, sistema de loja gamificada e pipelines CI/CD (GitHub Actions). Banco de dados MongoDB com Mongoose, e-mails transacionais via Brevo, observabilidade com Winston.",
+            summary:
+              "Desenvolvimento fullstack da Pionira, plataforma educacional gamificada com tutor de IA.",
+            highlights: [
+              "Backend Node.js/TypeScript sobre Express, deployado em Firebase Functions (stage) e AWS Lambda containerizada (produção).",
+              "Autenticação JWT e integração com a OpenAI Assistants API com cache de respostas.",
+              "Geração de certificados PDF com Handlebars e sistema de loja gamificada.",
+              "Pipelines CI/CD com GitHub Actions, MongoDB/Mongoose, e-mails transacionais via Brevo e observabilidade com Winston.",
+            ],
             stack: [
               "Node.js",
               "TypeScript",
@@ -84,8 +92,15 @@ export const translations = {
             company: "Quantum Finance",
             role: "Estagiário de Dados → Analista de Dados (Foco em Engenharia)",
             period: "Jun/2021 — Set/2025",
-            description:
-              "Desenvolvimento de 100+ scrapers financeiros (APIs, HTML, PDFs, XML) e estruturação de 30+ pipelines ETL com arquitetura medalhão para processamento de dados de mercado. Migração e orquestração de processos do Rundeck para Apache Airflow com dockerização, pipelines CI/CD no GitLab e DAGs de automação. Implementação de Change Data Capture (CDC) no SQL Server para rastreabilidade e consistência. Modelagem de curvas de juros (Nelson-Siegel, cubic spline, flat-forward) e cálculos de Renda Fixa (preço, taxa, duration de Macaulay, %CDI, VNA). Integração com fontes B3, ANBIMA, IBGE e CVM. Criação de framework Python que abstraiu operações de atualização de bases de dados.",
+            summary:
+              "Engenharia de dados de mercado financeiro, da coleta ao cálculo de renda fixa.",
+            highlights: [
+              "100+ scrapers financeiros (APIs, HTML, PDFs, XML) e 30+ pipelines ETL com arquitetura medalhão.",
+              "Migração de processos do Rundeck para o Apache Airflow, com dockerização, CI/CD no GitLab e DAGs de automação.",
+              "Change Data Capture (CDC) no SQL Server para rastreabilidade e consistência.",
+              "Modelagem de curvas de juros (Nelson-Siegel, cubic spline, flat-forward) e cálculos de renda fixa (preço, taxa, duration de Macaulay, %CDI, VNA).",
+              "Integração com fontes B3, ANBIMA, IBGE e CVM, e framework Python que abstraiu a atualização das bases.",
+            ],
             stack: [
               "Python",
               "SQL Server",
@@ -101,8 +116,12 @@ export const translations = {
             company: "Lab2M - LAMCE/COPPE/UFRJ",
             role: "Pesquisador de Iniciação Científica",
             period: "Jul/2019 — Abr/2023",
-            description:
-              "Criação de simuladores de migração sísmica 2D e interfaces para visualização de modelos geológicos em alta resolução.",
+            summary:
+              "Pesquisa em geofísica computacional aplicada à migração sísmica.",
+            highlights: [
+              "Simuladores de migração sísmica 2D.",
+              "Interfaces para visualização de modelos geológicos em alta resolução.",
+            ],
             stack: [
               "Python",
               "Modelagem Numérica",
@@ -119,8 +138,15 @@ export const translations = {
             company: "Projeto Privado",
             role: "Desenvolvedor Fullstack",
             period: "Jul/2025 — Out/2025",
-            description:
-              "Desenvolvimento de plataforma educacional, implementada com arquitetura de microserviços. Responsável pela construção de API Gateway em FastAPI para orquestração de serviços, microserviços Python especializados (autenticação, geração de dados de perfil via IA e adaptação de materiais), integração com Supabase (PostgreSQL + Auth + Storage), pipeline de processamento de documentos com conversão LaTeX-to-PDF via xelatex, e integração com workflows n8n orquestrando modelos de linguagem (OpenAI GPT-4o para geração de conteúdo e Google Gemini para geração de imagens). Frontend em React 19 + TypeScript + Vite gerenciando questionários dinâmicos, visualização de materiais e fluxo completo de caracterização pedagógica do aluno.",
+            summary:
+              "Plataforma educacional em arquitetura de microserviços, da orquestração ao frontend.",
+            highlights: [
+              "API Gateway em FastAPI orquestrando microserviços Python (autenticação, geração de perfil via IA e adaptação de materiais).",
+              "Integração com Supabase (PostgreSQL, Auth e Storage).",
+              "Pipeline de documentos com conversão LaTeX-to-PDF via xelatex.",
+              "Workflows n8n orquestrando LLMs (OpenAI GPT-4o para conteúdo, Google Gemini para imagens).",
+              "Frontend React 19 + TypeScript + Vite com questionários dinâmicos e caracterização pedagógica do aluno.",
+            ],
             stack: [
               "React",
               "TypeScript",
@@ -137,8 +163,14 @@ export const translations = {
             company: "Plataforma de Otimização de Portfólios",
             role: "Desenvolvedor Fullstack",
             period: "Fev/2025 — Jun/2025",
-            description:
-              "Desenvolvimento de plataforma web para otimização de portfólios financeiros usando Teoria Moderna de Portfólios (Markowitz). Implementação de arquitetura em camadas (Views, Services, Infra) com fluxo completo de cadastro (solicitação, confirmação por e-mail, aprovação administrativa), sistema de autenticação seguro com hash de senhas e tokens, integração SendGrid para e-mails transacionais com templates HTML, e motor de cálculo de fronteira eficiente via simulação Monte Carlo.",
+            summary:
+              "Plataforma web de otimização de portfólios pela Teoria Moderna de Portfólios (Markowitz).",
+            highlights: [
+              "Arquitetura em camadas (Views, Services, Infra).",
+              "Fluxo completo de cadastro: solicitação, confirmação por e-mail e aprovação administrativa.",
+              "Autenticação segura com hash de senhas e tokens, e e-mails transacionais via SendGrid com templates HTML.",
+              "Motor de cálculo da fronteira eficiente via simulação Monte Carlo.",
+            ],
             stack: [
               "Python",
               "SQLAlchemy",
@@ -261,7 +293,14 @@ export const translations = {
           "Modelagem de Dados",
         ],
         cloud: ["Docker", "AWS", "Azure", "Supabase", "Firebase", "CI/CD"],
-        frontend: ["React", "Next.js", "TypeScript", "Tailwind CSS", "Vite", "Flutter"],
+        frontend: [
+          "React",
+          "Next.js",
+          "TypeScript",
+          "Tailwind CSS",
+          "Vite",
+          "Flutter",
+        ],
         ai: [
           "Integração com LLMs (OpenAI, Mistral, Gemini)",
           "LangChain",
@@ -279,7 +318,7 @@ export const translations = {
       degree: {
         title: "Engenharia Civil",
         institution: "Universidade do Estado do Rio de Janeiro (UERJ)",
-        period: "Jan/2018 — Dez/2026 (Previsão)",
+        period: "Jan/2018 — Dez/2026",
         description:
           "Foco em modelagem numérica, análise estrutural e aplicação de métodos computacionais para engenharia e dados.",
       },
@@ -345,6 +384,8 @@ export const translations = {
     hero: {
       name: "Marcelo Cardozo",
       title: "Software Engineer",
+      tagline:
+        "I build end-to-end platforms, from data pipelines and APIs to interfaces and AI systems in production.",
       scrollDown: "Scroll down",
     },
     nav: {
@@ -369,8 +410,14 @@ export const translations = {
             company: "Gino Terentim Business Development Academy",
             role: "Mid-Level Software Developer",
             period: "Oct/2025 — Present",
-            description:
-              "Fullstack development of gamified educational platform (Pionira) with AI tutor. Node.js/TypeScript backend on Express, deployed to Firebase Functions (stage) and containerized AWS Lambda (production). Implementation of JWT authentication, OpenAI Assistants API integration with response caching, PDF certificate generation with Handlebars, gamified shop system, and CI/CD pipelines (GitHub Actions). MongoDB database with Mongoose, transactional emails via Brevo, observability with Winston.",
+            summary:
+              "Fullstack development of Pionira, a gamified educational platform with an AI tutor.",
+            highlights: [
+              "Node.js/TypeScript backend on Express, deployed to Firebase Functions (stage) and containerized AWS Lambda (production).",
+              "JWT authentication and OpenAI Assistants API integration with response caching.",
+              "PDF certificate generation with Handlebars and a gamified shop system.",
+              "CI/CD pipelines with GitHub Actions, MongoDB/Mongoose, transactional emails via Brevo, and observability with Winston.",
+            ],
             stack: [
               "Node.js",
               "TypeScript",
@@ -392,8 +439,15 @@ export const translations = {
             company: "Quantum Finance",
             role: "Data Intern → Data Analyst (Engineering Focus)",
             period: "Jun/2021 — Sep/2025",
-            description:
-              "Developed 100+ financial data scrapers (APIs, HTML, PDFs, XML) and structured 30+ ETL pipelines with medallion architecture for market data processing. Migrated and orchestrated processes from Rundeck to Apache Airflow with dockerization, CI/CD pipelines on GitLab, and automation DAGs. Implemented Change Data Capture (CDC) on SQL Server for traceability and consistency. Interest rate curve modeling (Nelson-Siegel, cubic spline, flat-forward) and Fixed Income calculations (price, rate, Macaulay duration, %CDI, VNA). Integration with B3, ANBIMA, IBGE, and CVM data sources. Created Python framework that abstracted database update operations.",
+            summary:
+              "Financial market data engineering, from collection to fixed income calculations.",
+            highlights: [
+              "100+ financial data scrapers (APIs, HTML, PDFs, XML) and 30+ ETL pipelines with medallion architecture.",
+              "Migration from Rundeck to Apache Airflow, with dockerization, CI/CD on GitLab, and automation DAGs.",
+              "Change Data Capture (CDC) on SQL Server for traceability and consistency.",
+              "Interest rate curve modeling (Nelson-Siegel, cubic spline, flat-forward) and fixed income calculations (price, rate, Macaulay duration, %CDI, VNA).",
+              "Integration with B3, ANBIMA, IBGE, and CVM sources, plus a Python framework that abstracted database updates.",
+            ],
             stack: [
               "Python",
               "SQL Server",
@@ -408,8 +462,12 @@ export const translations = {
             company: "Lab2M - LAMCE/COPPE/UFRJ",
             role: "Undergraduate Research Assistant",
             period: "Jul/2019 — Apr/2023",
-            description:
-              "Creation of 2D seismic migration simulators and interfaces for visualization of high-resolution geological models.",
+            summary:
+              "Research in computational geophysics applied to seismic migration.",
+            highlights: [
+              "2D seismic migration simulators.",
+              "Interfaces for high-resolution geological model visualization.",
+            ],
             stack: [
               "Python",
               "Numerical Modeling",
@@ -426,8 +484,15 @@ export const translations = {
             company: "Private Project",
             role: "Fullstack Developer",
             period: "Jul/2025 — Oct/2025",
-            description:
-              "Development of educational platform implemented with microservices architecture. Responsible for building API Gateway in FastAPI for service orchestration, specialized Python microservices (authentication, AI-driven profile data generation and material adaptation), integration with Supabase (PostgreSQL + Auth + Storage), document processing pipeline with LaTeX-to-PDF conversion via xelatex, and integration with n8n workflows orchestrating language models (OpenAI GPT-4o for content generation and Google Gemini for image generation). Frontend in React 19 + TypeScript + Vite managing dynamic questionnaires, material visualization and complete pedagogical student characterization flow.",
+            summary:
+              "Educational platform on microservices architecture, from orchestration to frontend.",
+            highlights: [
+              "API Gateway in FastAPI orchestrating Python microservices (authentication, AI-driven profile generation, and material adaptation).",
+              "Integration with Supabase (PostgreSQL, Auth, and Storage).",
+              "Document pipeline with LaTeX-to-PDF conversion via xelatex.",
+              "n8n workflows orchestrating LLMs (OpenAI GPT-4o for content, Google Gemini for images).",
+              "React 19 + TypeScript + Vite frontend with dynamic questionnaires and pedagogical student characterization.",
+            ],
             stack: [
               "React",
               "TypeScript",
@@ -444,8 +509,14 @@ export const translations = {
             company: "Portfolio Optimization Platform",
             role: "Fullstack Developer",
             period: "Feb/2025 — Jun/2025",
-            description:
-              "Development of web platform for financial portfolio optimization using Modern Portfolio Theory (Markowitz). Implementation of layered architecture (Views, Services, Infra) with complete registration flow (request, email confirmation, administrative approval), secure authentication system with password hashing and tokens, SendGrid integration for transactional emails with HTML templates, and efficient frontier calculation engine via Monte Carlo simulation.",
+            summary:
+              "Web platform for portfolio optimization using Modern Portfolio Theory (Markowitz).",
+            highlights: [
+              "Layered architecture (Views, Services, Infra).",
+              "Complete registration flow: request, email confirmation, and administrative approval.",
+              "Secure authentication with password hashing and tokens, plus transactional emails via SendGrid with HTML templates.",
+              "Efficient frontier calculation engine via Monte Carlo simulation.",
+            ],
             stack: [
               "Python",
               "SQLAlchemy",
@@ -568,7 +639,14 @@ export const translations = {
           "Data Modeling",
         ],
         cloud: ["Docker", "AWS", "Azure", "Supabase", "Firebase", "CI/CD"],
-        frontend: ["React", "Next.js", "TypeScript", "Tailwind CSS", "Vite", "Flutter"],
+        frontend: [
+          "React",
+          "Next.js",
+          "TypeScript",
+          "Tailwind CSS",
+          "Vite",
+          "Flutter",
+        ],
         ai: [
           "LLM Integration (OpenAI, Mistral, Gemini)",
           "LangChain",
@@ -586,7 +664,7 @@ export const translations = {
       degree: {
         title: "Civil Engineering",
         institution: "State University of Rio de Janeiro (UERJ)",
-        period: "Jan/2018 — Dec/2026 (Expected)",
+        period: "Jan/2018 — Dec/2026",
         description:
           "Focus on numerical modeling, structural analysis and application of computational methods for engineering and data.",
       },
