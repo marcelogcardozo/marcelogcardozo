@@ -3,6 +3,7 @@ import { Plus, Network, X } from 'lucide-react';
 import { useLanguage } from '../../contexts/LanguageContext';
 import { useState, lazy, Suspense } from 'react';
 import { Section } from '../Section';
+import { staggerContainer, fadeUp, inView } from '../../lib/motion';
 
 const MiroEmbedLazy = lazy(() => import('../MiroEmbed').then(mod => ({ default: mod.MiroEmbed })));
 
@@ -34,7 +35,7 @@ const ExperienceRow = ({ exp, id, isExpanded, onToggle, onOpenDiagram, viewDiagr
   const current = isCurrent(exp.period);
 
   return (
-    <li className="border-b border-[var(--line)]">
+    <motion.li variants={fadeUp} className="border-b border-[var(--line)]">
       <button
         onClick={onToggle}
         className="group w-full text-left py-6 row-hover ring-accent"
@@ -107,7 +108,7 @@ const ExperienceRow = ({ exp, id, isExpanded, onToggle, onOpenDiagram, viewDiagr
           </motion.div>
         )}
       </AnimatePresence>
-    </li>
+    </motion.li>
   );
 };
 
@@ -175,7 +176,13 @@ export const Experience = () => {
           {groups.map((group) => (
             <div key={group.key}>
               <p className="kicker mb-4">{group.label}</p>
-              <ul className="border-t border-[var(--line)]">
+              <motion.ul
+                className="border-t border-[var(--line)]"
+                variants={staggerContainer}
+                initial="hidden"
+                whileInView="show"
+                viewport={inView}
+              >
                 {group.items.map((exp) => {
                   const id = `${group.key}-${exp.index}`;
                   return (
@@ -191,7 +198,7 @@ export const Experience = () => {
                     />
                   );
                 })}
-              </ul>
+              </motion.ul>
             </div>
           ))}
         </div>

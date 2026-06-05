@@ -25,10 +25,10 @@ export const Contact = () => {
           <p className="text-lg text-[var(--muted)] max-w-prose">{t.contact.subtitle}</p>
           <a
             href="mailto:m.cardozocg@outlook.com"
-            className="group mt-5 inline-flex items-center gap-2.5 text-xl font-medium text-[var(--text)] hover:text-[var(--accent)] transition-colors ring-accent"
+            className="mt-6 inline-flex items-center gap-2 rounded-lg bg-[var(--text)] px-5 py-2.5 text-sm font-medium text-[var(--color-bg)] hover:opacity-90 transition-opacity ring-accent"
           >
-            <Mail className="w-5 h-5 text-[var(--faint)] group-hover:text-[var(--accent)] transition-colors" />
-            m.cardozocg@outlook.com
+            <Mail className="w-4 h-4" />
+            {t.contact.email}
           </a>
         </div>
 

@@ -1,6 +1,8 @@
+import { MotionConfig } from 'framer-motion';
 import { ThemeProvider } from './contexts/ThemeContext';
 import { LanguageProvider } from './contexts/LanguageContext';
 import { Navbar } from './components/Navbar';
+import { ScrollProgress } from './components/ScrollProgress';
 import { Hero } from './components/sections/Hero';
 import { Experience } from './components/sections/Experience';
 import { Projects } from './components/sections/Projects';
@@ -15,7 +17,9 @@ function App() {
   return (
     <ThemeProvider>
       <LanguageProvider>
+        <MotionConfig reducedMotion="user">
         <div className="min-h-screen bg-bg text-text transition-colors">
+          <ScrollProgress />
           <Analytics />
           <SpeedInsights />
           <Navbar />
@@ -29,6 +33,7 @@ function App() {
             <Footer />
           </main>
         </div>
+        </MotionConfig>
       </LanguageProvider>
     </ThemeProvider>
   );

@@ -1,6 +1,8 @@
+import { motion } from 'framer-motion';
 import { ArrowUpRight } from 'lucide-react';
 import { useLanguage } from '../../contexts/LanguageContext';
 import { Section } from '../Section';
+import { staggerContainer, fadeUp, inView } from '../../lib/motion';
 
 export const Education = () => {
   const { t } = useLanguage();
@@ -21,7 +23,13 @@ export const Education = () => {
       {/* Certifications */}
       <div className="mt-12">
         <p className="kicker mb-5">{certifications.title}</p>
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-10 gap-y-1">
+        <motion.div
+          className="grid grid-cols-1 sm:grid-cols-2 gap-x-10 gap-y-1"
+          variants={staggerContainer}
+          initial="hidden"
+          whileInView="show"
+          viewport={inView}
+        >
           {certifications.list.map((cert) => {
             const meta = `${cert.provider} · ${cert.year}`;
             const inner = (
@@ -37,22 +45,23 @@ export const Education = () => {
             );
 
             return cert.url ? (
-              <a
+              <motion.a
                 key={`${cert.title}-${cert.year}`}
+                variants={fadeUp}
                 href={cert.url}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="group flex items-start justify-between gap-3 py-3 row-hover ring-accent"
               >
                 {inner}
-              </a>
+              </motion.a>
             ) : (
-              <div key={`${cert.title}-${cert.year}`} className="flex items-start justify-between gap-3 py-3">
+              <motion.div key={`${cert.title}-${cert.year}`} variants={fadeUp} className="flex items-start justify-between gap-3 py-3">
                 {inner}
-              </div>
+              </motion.div>
             );
           })}
-        </div>
+        </motion.div>
       </div>
     </Section>
   );

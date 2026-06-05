@@ -28,20 +28,27 @@ export const Section = ({ id, index, title, children, wide = false, fill = true 
         fill ? ' min-h-[calc(100svh-3.5rem)]' : ''
       }`}
     >
-      <motion.div
-        className={wide ? 'container-wide' : 'container-page'}
-        initial={reduceMotion ? false : { opacity: 0, y: 16 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true, margin: '-80px' }}
-        transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
-      >
-        <div className="flex items-baseline gap-4 mb-10">
+      <div className={wide ? 'container-wide' : 'container-page'}>
+        <motion.div
+          className="flex items-baseline gap-4 mb-10"
+          initial={reduceMotion ? false : { opacity: 0, y: 12 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: '-80px' }}
+          transition={{ duration: 0.5, ease: [0.22, 1, 0.36, 1] }}
+        >
           <span className="kicker tabular-nums">{index}</span>
           <h2 className="heading-section">{title}</h2>
-          <span className="h-px flex-1 bg-[var(--line)]" aria-hidden />
-        </div>
+          <motion.span
+            className="h-px flex-1 origin-left bg-[var(--line)]"
+            initial={reduceMotion ? false : { scaleX: 0 }}
+            whileInView={{ scaleX: 1 }}
+            viewport={{ once: true, margin: '-80px' }}
+            transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1], delay: 0.1 }}
+            aria-hidden
+          />
+        </motion.div>
         {children}
-      </motion.div>
+      </div>
     </section>
   );
 };

@@ -1,13 +1,21 @@
+import { motion } from 'framer-motion';
 import { ArrowUpRight, Github, Lock } from 'lucide-react';
 import { useLanguage } from '../../contexts/LanguageContext';
 import { Section } from '../Section';
+import { staggerContainer, fadeUp, inView } from '../../lib/motion';
 
 export const Projects = () => {
   const { t } = useLanguage();
 
   return (
     <Section id="projects" index="02" title={t.projects.title} wide>
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-6 gap-y-10">
+      <motion.div
+        className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-6 gap-y-10"
+        variants={staggerContainer}
+        initial="hidden"
+        whileInView="show"
+        viewport={inView}
+      >
         {t.projects.projects.map((project) => {
           const primary = project.url || (!project.private ? project.git : '');
 
@@ -22,7 +30,7 @@ export const Projects = () => {
           );
 
           return (
-            <article key={project.title} className="group flex flex-col">
+            <motion.article key={project.title} variants={fadeUp} className="group flex flex-col">
               {project.image && (
                 primary ? (
                   <a
@@ -88,10 +96,10 @@ export const Projects = () => {
                   </span>
                 )}
               </div>
-            </article>
+            </motion.article>
           );
         })}
-      </div>
+      </motion.div>
     </Section>
   );
 };

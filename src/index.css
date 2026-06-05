@@ -110,12 +110,12 @@
   }
   .mono { font-family: var(--font-mono); }
 
-  /* Neutral tag/chip — monospace, hairline, subtle hover */
+  /* Neutral tag/chip — monospace, hairline, subtle hover lift */
   .chip {
     font-family: var(--font-mono);
     @apply inline-flex items-center px-2 py-1 text-[11px] leading-none text-[var(--muted)]
-           border border-[var(--line)] rounded-md transition-colors
-           hover:border-[var(--line-strong)] hover:text-[var(--text)];
+           border border-[var(--line)] rounded-md transition duration-200
+           hover:border-[var(--line-strong)] hover:text-[var(--text)] hover:-translate-y-px;
   }
 
   /* Interactive list row — bleeds a hover surface past the column */
