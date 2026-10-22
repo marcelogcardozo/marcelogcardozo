@@ -7,8 +7,8 @@ export const Contact = () => {
   const { t, language } = useLanguage();
 
   const resumeUrl = language === 'en-US'
-    ? 'https://drive.google.com/file/d/1N30d3Yaanp868kqKbs1CXCvIERf06PRY/view?usp=sharing'
-    : 'https://drive.google.com/file/d/1no3_zVn6oGSYaiiK7nt-XztYyjyBFbm2/view?usp=sharing';
+    ? 'https://drive.google.com/file/d/1pUgbEOxyr0585JpIMzvXi-Fytkc7brFu/view?usp=sharing'
+    : 'https://drive.google.com/file/d/1obVQLKog5ed9U5xbTbCGEya2s-RmDRa3/view?usp=sharing';
 
   const socialLinks = [
     { name: 'GitHub', url: 'https://github.com/marcelogcardozo', icon: Github },
