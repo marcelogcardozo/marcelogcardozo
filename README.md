@@ -4,6 +4,8 @@ Software Engineer building data-intensive systems.
 
 I design and ship APIs, data pipelines, AI workflows and platforms from architecture to production with experience in high-complexity domains such as finance, legal and education.
 
+Currently working in fixed income post-trade, focusing on securities pricing.
+
 Python · Next.js · SQL Server / PostgreSQL · MongoDB · AWS · LLM Orchestration
 
 ---
