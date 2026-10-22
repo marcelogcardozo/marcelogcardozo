@@ -37,7 +37,7 @@
     "hero": {
       "name": "Marcelo Cardozo",
       "title": "Engenheiro de Software",
-      "tagline": "Construo plataformas de ponta a ponta, de pipelines de dados e APIs a interfaces e sistemas com IA em produção.",
+      "tagline": "Construo sistemas robustos e orientados a dados para o mercado financeiro, de pipelines e precificação de renda fixa a APIs, interfaces e soluções com IA em produção.",
       "scrollDown": "Role para baixo"
     },
     "nav": {
@@ -53,22 +53,61 @@
     "title": "Experiência Profissional",
     "employmentTitle": "Empregos",
     "freelanceTitle": "Projetos Freelance",
+    "volunteerTitle": "Voluntariado",
     "employmentLabel": "CLT",
     "freelanceLabel": "Freelance",
     "viewDiagram": "Visualizar Diagrama",
     "closeDiagram": "Fechar diagrama",
     "employment": [
       {
-        "index": 6,
-        "company": "Gino Terentim Academia de Desenvolvimento Empresarial",
-        "role": "Desenvolvedor de Software Pleno",
-        "period": "Out/2025 — Presente",
-        "summary": "Desenvolvimento fullstack da Pionira, plataforma educacional gamificada com tutor de IA.",
+        "index": 8,
+        "company": "Maravi",
+        "role": "Analista de Sistemas | Renda Fixa",
+        "period": "Set/2026 — Presente",
+        "summary": "Atuação na vertical de Pós-Trade de Renda Fixa, com foco em precificação de ativos.",
+        "highlights": [],
+        "stack": []
+      },
+      {
+        "index": 7,
+        "company": "BTG Pactual",
+        "role": "Assistant | Asset Servicing",
+        "period": "Jun/2026 — Set/2026",
+        "summary": "Equipe de Automation (Innovation), desenvolvendo software para automação, transformação e sustentação de processos no mercado financeiro, de novas aplicações à evolução de sistemas legados.",
         "highlights": [
-          "Backend Node.js/TypeScript sobre Express, deployado em Firebase Functions (stage) e AWS Lambda containerizada (produção).",
-          "Autenticação JWT e integração com a OpenAI Assistants API com cache de respostas.",
-          "Geração de certificados PDF com Handlebars e sistema de loja gamificada.",
-          "Pipelines CI/CD com GitHub Actions, MongoDB/Mongoose, e-mails transacionais via Brevo e observabilidade com Winston."
+          "Aplicações web end-to-end com React + TypeScript no frontend e FastAPI + AWS Lambda no backend, utilizando API Gateway, SQS, Aurora MySQL, S3 e CloudFront.",
+          "Chatbot com IA integrando Copilot Studio e AWS Lambda (LangChain), com interfaces via Adaptive Cards e integração ao Microsoft Teams e aplicações web.",
+          "Melhorias e correções em aplicações legadas, SharePoint, Pipefy e automações em VBA/Excel, atendendo demandas diretamente das áreas de negócio."
+        ],
+        "stack": [
+          "React",
+          "TypeScript",
+          "FastAPI",
+          "AWS Lambda",
+          "API Gateway",
+          "SQS",
+          "Aurora MySQL",
+          "S3",
+          "CloudFront",
+          "LangChain",
+          "Copilot Studio",
+          "Microsoft Teams",
+          "SharePoint",
+          "Pipefy",
+          "VBA"
+        ]
+      },
+      {
+        "index": 6,
+        "company": "Gino Terentim Desenvolvimento Profissional",
+        "role": "Desenvolvedor de Software Pleno",
+        "period": "Out/2025 — Jun/2026",
+        "summary": "Desenvolvimento da Pionira, plataforma educacional gamificada com temática de savana africana (~1.600 usuários), e de suas aplicações satélites. Responsável pela arquitetura, execução técnica e direção tecnológica do produto.",
+        "highlights": [
+          "Arquitetura modular “Safari”, que isola cada curso em seu próprio ambiente e permite expandir para novos produtos sem retrabalho. Hoje hospeda o MBA em Gestão Estratégica de Valor, maior produto da empresa.",
+          "Sistema de engajamento baseado no Octalysis Framework: comunidade, Q&A, ranking, streaks, XP, níveis, recompensas e skins para a mascote Makena.",
+          "Definição de arquitetura, stack, padrões de código e processos de revisão, além da priorização do backlog com stakeholders e do suporte técnico aos usuários.",
+          "Backend Node.js/TypeScript (Express) em AWS Lambda containerizada e Firebase Functions, com MongoDB, autenticação JWT, tutor de IA via OpenAI Assistants API e CI/CD com GitHub Actions."
         ],
         "stack": [
           "Node.js",
@@ -90,20 +129,25 @@
       {
         "index": 2,
         "company": "Quantum Finance",
-        "role": "Estagiário de Dados → Analista de Dados (Foco em Engenharia)",
+        "role": "Estagiário de Dados → Analista de Dados Jr | Renda Fixa",
         "period": "Jun/2021 — Set/2025",
-        "summary": "Engenharia de dados de mercado financeiro, da coleta ao cálculo de renda fixa.",
+        "summary": "Engenharia de dados para renda fixa, fundos de investimento e índices, da coleta à precificação.",
         "highlights": [
-          "100+ scrapers financeiros (APIs, HTML, PDFs, XML) e 30+ pipelines ETL com arquitetura medalhão.",
-          "Migração de processos do Rundeck para o Apache Airflow, com dockerização, CI/CD no GitLab e DAGs de automação.",
-          "Change Data Capture (CDC) no SQL Server para rastreabilidade e consistência.",
-          "Modelagem de curvas de juros (Nelson-Siegel, cubic spline, flat-forward) e cálculos de renda fixa (preço, taxa, duration de Macaulay, %CDI, VNA).",
-          "Integração com fontes B3, ANBIMA, IBGE e CVM, e framework Python que abstraiu a atualização das bases."
+          "+100 scrapers financeiros (APIs, HTML, PDF, XML) para ingestão e estruturação de dados de mercado.",
+          "+20 pipelines de dados (ETL) integrando scrapers a bases internas, escalados com arquitetura medalhão para melhorar performance e padronização entre equipes.",
+          "Pipelines de abastecimento do Consolidador de Carteiras e fluxo de atualização de carteiras de índices e fundos, integrando fontes como CVM, IBGE e ANBIMA.",
+          "Migração de rotinas do Rundeck para o Airflow, com desenho das DAGs e refatoração dos processos de orquestração.",
+          "Curvas de juros com modelo Nelson-Siegel e método de Newton-Raphson para precificação de ativos de renda fixa, além de módulos de métricas (prazo, preço, taxa, duration, dividend yield).",
+          "Módulo Python reutilizável que padronizou atualizações de bases (Pandas/Polars + SQL Server), reduzindo operações de upsert a 2 linhas de código.",
+          "Automação de rotinas críticas de atualização e validação de dados, reduzindo tempo operacional e erros manuais.",
+          "Interfaces desktop internas para controle, auditoria e rastreabilidade de alterações nas bases de dados."
         ],
         "stack": [
           "Python",
           "SQL Server",
           "Airflow",
+          "Pandas",
+          "Polars",
           "FastAPI",
           "ETL",
           "Docker",
@@ -113,18 +157,38 @@
       {
         "index": 0,
         "company": "Lab2M - LAMCE/COPPE/UFRJ",
-        "role": "Pesquisador de Iniciação Científica",
+        "role": "Aluno de Iniciação Científica",
         "period": "Jul/2019 — Abr/2023",
-        "summary": "Pesquisa em geofísica computacional aplicada à migração sísmica.",
+        "summary": "Soluções numéricas em Python para simulação e migração sísmica 2D, aplicando diferenças finitas e computação de alto desempenho com NumPy e Numba.",
         "highlights": [
-          "Simuladores de migração sísmica 2D.",
-          "Interfaces para visualização de modelos geológicos em alta resolução."
+          "Modelos da equação da onda acústica e algoritmos de migração sísmica a partir de sismogramas.",
+          "Aplicação desktop para visualização e interpretação de dados sísmicos no formato SEG-Y."
         ],
         "stack": [
           "Python",
+          "NumPy",
+          "Numba",
           "Modelagem Numérica",
           "Visualização",
           "Geofísica"
+        ]
+      }
+    ],
+    "volunteer": [
+      {
+        "index": 1,
+        "company": "IEEE Robotics and Automation Society",
+        "role": "Voluntário",
+        "period": "Ago/2021 — Dez/2021",
+        "summary": "Equipe de Automação e Robótica, com foco em IoT e sistemas embarcados.",
+        "highlights": [
+          "MVP de Home Assistant com Flutter, Arduino e ESP32, integrando sensores e dispositivos embarcados a uma aplicação mobile."
+        ],
+        "stack": [
+          "Flutter",
+          "Arduino",
+          "ESP32",
+          "IoT"
         ]
       }
     ],
@@ -245,6 +309,7 @@
           "Python",
           "Go",
           "TypeScript",
+          "SQL",
           "Arquitetura de APIs",
           "Design de Sistemas",
           "Microsserviços",
@@ -263,6 +328,7 @@
           "Node.js",
           "Express",
           "REST",
+          "RabbitMQ",
           "Integrações de APIs",
           "Autenticação",
           "Controle de Acesso",
@@ -275,10 +341,14 @@
         "items": [
           "SQL Server",
           "PostgreSQL",
+          "MySQL",
           "MongoDB",
           "Redis",
+          "Pandas",
+          "Polars",
           "ETL",
           "CDC",
+          "Arquitetura Medalhão",
           "Apache Airflow",
           "Modelagem de Dados"
         ]
@@ -286,12 +356,26 @@
       {
         "key": "cloud",
         "label": "Cloud & Infra",
-        "items": ["Docker", "AWS", "Azure", "Supabase", "Firebase", "CI/CD"]
+        "items": [
+          "Docker",
+          "AWS (Lambda, API Gateway, SQS, S3, CloudFront)",
+          "Azure",
+          "Supabase",
+          "Firebase",
+          "CI/CD"
+        ]
       },
       {
         "key": "frontend",
         "label": "Frontend",
-        "items": ["React", "Next.js", "TypeScript", "Tailwind CSS", "Vite", "Flutter"]
+        "items": [
+          "React",
+          "Next.js",
+          "TypeScript",
+          "Tailwind CSS",
+          "Vite",
+          "Flutter"
+        ]
       },
       {
         "key": "ai",
@@ -301,9 +385,12 @@
           "LangChain",
           "LangGraph",
           "Langfuse",
+          "Langflow",
           "RAG",
           "n8n",
           "Flowise",
+          "Copilot Studio",
+          "VBA",
           "Sistemas com IA em Produção"
         ]
       }

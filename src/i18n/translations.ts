@@ -1,16 +1,21 @@
 // Shared index order - only define indexes once here
 const experienceIndexes = {
   employment: {
-    "Gino Terentim Academia de Desenvolvimento Empresarial": 6,
-    "Gino Terentim Business Development Academy": 6, // Same company, English name
+    Maravi: 8,
+    "BTG Pactual": 7,
+    "Gino Terentim Desenvolvimento Profissional": 6,
+    "Gino Terentim Professional Development": 6, // Same company, English name
     "Quantum Finance": 2,
-    "Lab2M - COPPE/UFRJ": 0,
+    "Lab2M - LAMCE/COPPE/UFRJ": 0,
   },
   freelance: {
     "Projeto Privado": 5,
     "Private Project": 5, // Same company, English name
     "Plataforma de Otimização de Portfólios": 3,
     "Portfolio Optimization Platform": 3, // Same company, English name
+  },
+  volunteer: {
+    "IEEE Robotics and Automation Society": 1,
   },
 };
 
@@ -21,7 +26,7 @@ type ExperienceBase = {
 
 const addIndexes = <T extends ExperienceBase>(
   experiences: T[],
-  type: "employment" | "freelance",
+  type: keyof typeof experienceIndexes,
 ) => {
   return experiences.map((exp) => ({
     ...exp,
@@ -38,7 +43,7 @@ export const translations = {
       name: "Marcelo Cardozo",
       title: "Engenheiro de Software",
       tagline:
-        "Construo plataformas de ponta a ponta, de pipelines de dados e APIs a interfaces e sistemas com IA em produção.",
+        "Construo sistemas robustos e orientados a dados para o mercado financeiro, de pipelines e precificação de renda fixa a APIs, interfaces e soluções com IA em produção.",
       scrollDown: "Role para baixo",
     },
     nav: {
@@ -53,6 +58,7 @@ export const translations = {
       title: "Experiência Profissional",
       employmentTitle: "Empregos",
       freelanceTitle: "Projetos Freelance",
+      volunteerTitle: "Voluntariado",
       employmentLabel: "CLT",
       freelanceLabel: "Freelance",
       viewDiagram: "Visualizar Diagrama",
@@ -60,16 +66,54 @@ export const translations = {
       employment: addIndexes(
         [
           {
-            company: "Gino Terentim Academia de Desenvolvimento Empresarial",
-            role: "Desenvolvedor de Software Pleno",
-            period: "Out/2025 — Presente",
+            company: "Maravi",
+            role: "Analista de Sistemas | Renda Fixa",
+            period: "Set/2026 — Presente",
             summary:
-              "Desenvolvimento fullstack da Pionira, plataforma educacional gamificada com tutor de IA.",
+              "Atuação na vertical de Pós-Trade de Renda Fixa, com foco em precificação de ativos.",
+            highlights: [],
+            stack: [],
+          },
+          {
+            company: "BTG Pactual",
+            role: "Assistant | Asset Servicing",
+            period: "Jun/2026 — Set/2026",
+            summary:
+              "Equipe de Automation (Innovation), desenvolvendo software para automação, transformação e sustentação de processos no mercado financeiro, de novas aplicações à evolução de sistemas legados.",
             highlights: [
-              "Backend Node.js/TypeScript sobre Express, deployado em Firebase Functions (stage) e AWS Lambda containerizada (produção).",
-              "Autenticação JWT e integração com a OpenAI Assistants API com cache de respostas.",
-              "Geração de certificados PDF com Handlebars e sistema de loja gamificada.",
-              "Pipelines CI/CD com GitHub Actions, MongoDB/Mongoose, e-mails transacionais via Brevo e observabilidade com Winston.",
+              "Aplicações web end-to-end com React + TypeScript no frontend e FastAPI + AWS Lambda no backend, utilizando API Gateway, SQS, Aurora MySQL, S3 e CloudFront.",
+              "Chatbot com IA integrando Copilot Studio e AWS Lambda (LangChain), com interfaces via Adaptive Cards e integração ao Microsoft Teams e aplicações web.",
+              "Melhorias e correções em aplicações legadas, SharePoint, Pipefy e automações em VBA/Excel, atendendo demandas diretamente das áreas de negócio.",
+            ],
+            stack: [
+              "React",
+              "TypeScript",
+              "FastAPI",
+              "AWS Lambda",
+              "API Gateway",
+              "SQS",
+              "Aurora MySQL",
+              "S3",
+              "CloudFront",
+              "LangChain",
+              "Copilot Studio",
+              "Microsoft Teams",
+              "SharePoint",
+              "Pipefy",
+              "VBA",
+            ],
+          },
+          {
+            company: "Gino Terentim Desenvolvimento Profissional",
+            role: "Desenvolvedor de Software Pleno",
+            period: "Out/2025 — Jun/2026",
+            summary:
+              "Desenvolvimento da Pionira, plataforma educacional gamificada com temática de savana africana (~1.600 usuários), e de suas aplicações satélites. Responsável pela arquitetura, execução técnica e direção tecnológica do produto.",
+            highlights: [
+              "Arquitetura modular “Safari”, que isola cada curso em seu próprio ambiente e permite expandir para novos produtos sem retrabalho. Hoje hospeda o MBA em Gestão Estratégica de Valor, maior produto da empresa.",
+              "Sistema de engajamento baseado no Octalysis Framework: comunidade, Q&A, ranking, streaks, XP, níveis, recompensas e skins para a mascote Makena.",
+              "Definição de arquitetura, stack, padrões de código e processos de revisão, além da priorização do backlog com stakeholders e do suporte técnico aos usuários.",
+              "Backend Node.js/TypeScript (Express) em AWS Lambda containerizada e Firebase Functions, com MongoDB, autenticação JWT, tutor de IA via OpenAI Assistants API e CI/CD com GitHub Actions.",
             ],
             stack: [
               "Node.js",
@@ -90,21 +134,26 @@ export const translations = {
           },
           {
             company: "Quantum Finance",
-            role: "Estagiário de Dados → Analista de Dados (Foco em Engenharia)",
+            role: "Estagiário de Dados → Analista de Dados Jr | Renda Fixa",
             period: "Jun/2021 — Set/2025",
             summary:
-              "Engenharia de dados de mercado financeiro, da coleta ao cálculo de renda fixa.",
+              "Engenharia de dados para renda fixa, fundos de investimento e índices, da coleta à precificação.",
             highlights: [
-              "100+ scrapers financeiros (APIs, HTML, PDFs, XML) e 30+ pipelines ETL com arquitetura medalhão.",
-              "Migração de processos do Rundeck para o Apache Airflow, com dockerização, CI/CD no GitLab e DAGs de automação.",
-              "Change Data Capture (CDC) no SQL Server para rastreabilidade e consistência.",
-              "Modelagem de curvas de juros (Nelson-Siegel, cubic spline, flat-forward) e cálculos de renda fixa (preço, taxa, duration de Macaulay, %CDI, VNA).",
-              "Integração com fontes B3, ANBIMA, IBGE e CVM, e framework Python que abstraiu a atualização das bases.",
+              "+100 scrapers financeiros (APIs, HTML, PDF, XML) para ingestão e estruturação de dados de mercado.",
+              "+20 pipelines de dados (ETL) integrando scrapers a bases internas, escalados com arquitetura medalhão para melhorar performance e padronização entre equipes.",
+              "Pipelines de abastecimento do Consolidador de Carteiras e fluxo de atualização de carteiras de índices e fundos, integrando fontes como CVM, IBGE e ANBIMA.",
+              "Migração de rotinas do Rundeck para o Airflow, com desenho das DAGs e refatoração dos processos de orquestração.",
+              "Curvas de juros com modelo Nelson-Siegel e método de Newton-Raphson para precificação de ativos de renda fixa, além de módulos de métricas (prazo, preço, taxa, duration, dividend yield).",
+              "Módulo Python reutilizável que padronizou atualizações de bases (Pandas/Polars + SQL Server), reduzindo operações de upsert a 2 linhas de código.",
+              "Automação de rotinas críticas de atualização e validação de dados, reduzindo tempo operacional e erros manuais.",
+              "Interfaces desktop internas para controle, auditoria e rastreabilidade de alterações nas bases de dados.",
             ],
             stack: [
               "Python",
               "SQL Server",
               "Airflow",
+              "Pandas",
+              "Polars",
               "FastAPI",
               "ETL",
               "Docker",
@@ -112,18 +161,19 @@ export const translations = {
             ],
           },
           {
-            index: 1,
             company: "Lab2M - LAMCE/COPPE/UFRJ",
-            role: "Pesquisador de Iniciação Científica",
+            role: "Aluno de Iniciação Científica",
             period: "Jul/2019 — Abr/2023",
             summary:
-              "Pesquisa em geofísica computacional aplicada à migração sísmica.",
+              "Soluções numéricas em Python para simulação e migração sísmica 2D, aplicando diferenças finitas e computação de alto desempenho com NumPy e Numba.",
             highlights: [
-              "Simuladores de migração sísmica 2D.",
-              "Interfaces para visualização de modelos geológicos em alta resolução.",
+              "Modelos da equação da onda acústica e algoritmos de migração sísmica a partir de sismogramas.",
+              "Aplicação desktop para visualização e interpretação de dados sísmicos no formato SEG-Y.",
             ],
             stack: [
               "Python",
+              "NumPy",
+              "Numba",
               "Modelagem Numérica",
               "Visualização",
               "Geofísica",
@@ -131,6 +181,22 @@ export const translations = {
           },
         ],
         "employment",
+      ),
+      volunteer: addIndexes(
+        [
+          {
+            company: "IEEE Robotics and Automation Society",
+            role: "Voluntário",
+            period: "Ago/2021 — Dez/2021",
+            summary:
+              "Equipe de Automação e Robótica, com foco em IoT e sistemas embarcados.",
+            highlights: [
+              "MVP de Home Assistant com Flutter, Arduino e ESP32, integrando sensores e dispositivos embarcados a uma aplicação mobile.",
+            ],
+            stack: ["Flutter", "Arduino", "ESP32", "IoT"],
+          },
+        ],
+        "volunteer",
       ),
       freelance: addIndexes(
         [
@@ -263,6 +329,7 @@ export const translations = {
           "Python",
           "Go",
           "TypeScript",
+          "SQL",
           "Arquitetura de APIs",
           "Design de Sistemas",
           "Microsserviços",
@@ -277,6 +344,7 @@ export const translations = {
           "Node.js",
           "Express",
           "REST",
+          "RabbitMQ",
           "Integrações de APIs",
           "Autenticação",
           "Controle de Acesso",
@@ -285,14 +353,25 @@ export const translations = {
         data: [
           "SQL Server",
           "PostgreSQL",
+          "MySQL",
           "MongoDB",
           "Redis",
+          "Pandas",
+          "Polars",
           "ETL",
           "CDC",
+          "Arquitetura Medalhão",
           "Apache Airflow",
           "Modelagem de Dados",
         ],
-        cloud: ["Docker", "AWS", "Azure", "Supabase", "Firebase", "CI/CD"],
+        cloud: [
+          "Docker",
+          "AWS (Lambda, API Gateway, SQS, S3, CloudFront)",
+          "Azure",
+          "Supabase",
+          "Firebase",
+          "CI/CD",
+        ],
         frontend: [
           "React",
           "Next.js",
@@ -306,9 +385,12 @@ export const translations = {
           "LangChain",
           "LangGraph",
           "Langfuse",
+          "Langflow",
           "RAG",
           "n8n",
           "Flowise",
+          "Copilot Studio",
+          "VBA",
           "Sistemas com IA em Produção",
         ],
       },
@@ -385,7 +467,7 @@ export const translations = {
       name: "Marcelo Cardozo",
       title: "Software Engineer",
       tagline:
-        "I build end-to-end platforms, from data pipelines and APIs to interfaces and AI systems in production.",
+        "I build robust, data-driven systems for financial markets, from pipelines and fixed income pricing to APIs, interfaces and AI solutions in production.",
       scrollDown: "Scroll down",
     },
     nav: {
@@ -400,6 +482,7 @@ export const translations = {
       title: "Professional Experience",
       employmentTitle: "Employment",
       freelanceTitle: "Freelance Projects",
+      volunteerTitle: "Volunteering",
       employmentLabel: "Employment",
       freelanceLabel: "Freelance",
       viewDiagram: "View Diagram",
@@ -407,16 +490,54 @@ export const translations = {
       employment: addIndexes(
         [
           {
-            company: "Gino Terentim Business Development Academy",
-            role: "Mid-Level Software Developer",
-            period: "Oct/2025 — Present",
+            company: "Maravi",
+            role: "Systems Analyst | Fixed Income",
+            period: "Sep/2026 — Present",
             summary:
-              "Fullstack development of Pionira, a gamified educational platform with an AI tutor.",
+              "Working in the Fixed Income Post-Trade vertical, focused on asset pricing.",
+            highlights: [],
+            stack: [],
+          },
+          {
+            company: "BTG Pactual",
+            role: "Assistant | Asset Servicing",
+            period: "Jun/2026 — Sep/2026",
+            summary:
+              "Automation (Innovation) team, building software to automate, transform and sustain financial market processes, from new applications to the evolution of legacy systems.",
             highlights: [
-              "Node.js/TypeScript backend on Express, deployed to Firebase Functions (stage) and containerized AWS Lambda (production).",
-              "JWT authentication and OpenAI Assistants API integration with response caching.",
-              "PDF certificate generation with Handlebars and a gamified shop system.",
-              "CI/CD pipelines with GitHub Actions, MongoDB/Mongoose, transactional emails via Brevo, and observability with Winston.",
+              "End-to-end web applications with React + TypeScript on the frontend and FastAPI + AWS Lambda on the backend, using API Gateway, SQS, Aurora MySQL, S3 and CloudFront.",
+              "AI chatbot integrating Copilot Studio and AWS Lambda (LangChain), with Adaptive Cards interfaces and integration with Microsoft Teams and web applications.",
+              "Improvements and fixes to legacy applications, SharePoint, Pipefy and VBA/Excel automations, serving requests directly from business areas.",
+            ],
+            stack: [
+              "React",
+              "TypeScript",
+              "FastAPI",
+              "AWS Lambda",
+              "API Gateway",
+              "SQS",
+              "Aurora MySQL",
+              "S3",
+              "CloudFront",
+              "LangChain",
+              "Copilot Studio",
+              "Microsoft Teams",
+              "SharePoint",
+              "Pipefy",
+              "VBA",
+            ],
+          },
+          {
+            company: "Gino Terentim Professional Development",
+            role: "Mid-Level Software Developer",
+            period: "Oct/2025 — Jun/2026",
+            summary:
+              "Development of Pionira, a gamified educational platform with an African savanna theme (~1,600 users), and its satellite applications. Responsible for the product's architecture, technical execution and technology direction.",
+            highlights: [
+              "“Safari” modular architecture, isolating each course in its own environment and enabling expansion to new products without rework. It now hosts the MBA in Strategic Value Management, the company's largest product.",
+              "Engagement system based on the Octalysis Framework: community, Q&A, ranking, streaks, XP, levels, rewards and skins for the Makena mascot.",
+              "Defined architecture, stack, coding standards and review processes, while prioritizing the backlog with stakeholders and providing technical support to users.",
+              "Node.js/TypeScript (Express) backend on containerized AWS Lambda and Firebase Functions, with MongoDB, JWT authentication, an AI tutor via the OpenAI Assistants API and CI/CD with GitHub Actions.",
             ],
             stack: [
               "Node.js",
@@ -437,21 +558,26 @@ export const translations = {
           },
           {
             company: "Quantum Finance",
-            role: "Data Intern → Data Analyst (Engineering Focus)",
+            role: "Data Intern → Junior Data Analyst | Fixed Income",
             period: "Jun/2021 — Sep/2025",
             summary:
-              "Financial market data engineering, from collection to fixed income calculations.",
+              "Data engineering for fixed income, investment funds and indexes, from collection to pricing.",
             highlights: [
-              "100+ financial data scrapers (APIs, HTML, PDFs, XML) and 30+ ETL pipelines with medallion architecture.",
-              "Migration from Rundeck to Apache Airflow, with dockerization, CI/CD on GitLab, and automation DAGs.",
-              "Change Data Capture (CDC) on SQL Server for traceability and consistency.",
-              "Interest rate curve modeling (Nelson-Siegel, cubic spline, flat-forward) and fixed income calculations (price, rate, Macaulay duration, %CDI, VNA).",
-              "Integration with B3, ANBIMA, IBGE, and CVM sources, plus a Python framework that abstracted database updates.",
+              "100+ financial scrapers (APIs, HTML, PDF, XML) for ingesting and structuring market data.",
+              "20+ data pipelines (ETL) integrating scrapers with internal databases, scaled with a medallion architecture to improve performance and standardization across teams.",
+              "Data feed pipelines for the Portfolio Consolidator and the update flow for index and fund portfolios, integrating sources such as CVM, IBGE and ANBIMA.",
+              "Migration of routines from Rundeck to Airflow, including DAG design and refactoring of orchestration processes.",
+              "Yield curves with the Nelson-Siegel model and Newton-Raphson method for fixed income asset pricing, plus metric modules (term, price, rate, duration, dividend yield).",
+              "Reusable Python module that standardized database updates (Pandas/Polars + SQL Server), reducing upsert operations to 2 lines of code.",
+              "Automation of critical data update and validation routines, reducing operational time and manual errors.",
+              "Internal desktop interfaces for control, auditing and traceability of database changes.",
             ],
             stack: [
               "Python",
               "SQL Server",
               "Airflow",
+              "Pandas",
+              "Polars",
               "FastAPI",
               "ETL",
               "Docker",
@@ -460,16 +586,18 @@ export const translations = {
           },
           {
             company: "Lab2M - LAMCE/COPPE/UFRJ",
-            role: "Undergraduate Research Assistant",
+            role: "Undergraduate Research Student",
             period: "Jul/2019 — Apr/2023",
             summary:
-              "Research in computational geophysics applied to seismic migration.",
+              "Numerical solutions in Python for 2D seismic simulation and migration, applying finite differences and high-performance computing with NumPy and Numba.",
             highlights: [
-              "2D seismic migration simulators.",
-              "Interfaces for high-resolution geological model visualization.",
+              "Acoustic wave equation models and seismic migration algorithms from seismograms.",
+              "Desktop application for visualizing and interpreting seismic data in SEG-Y format.",
             ],
             stack: [
               "Python",
+              "NumPy",
+              "Numba",
               "Numerical Modeling",
               "Visualization",
               "Geophysics",
@@ -477,6 +605,22 @@ export const translations = {
           },
         ],
         "employment",
+      ),
+      volunteer: addIndexes(
+        [
+          {
+            company: "IEEE Robotics and Automation Society",
+            role: "Volunteer",
+            period: "Aug/2021 — Dec/2021",
+            summary:
+              "Automation and Robotics team, focused on IoT and embedded systems.",
+            highlights: [
+              "Home Assistant MVP with Flutter, Arduino and ESP32, integrating sensors and embedded devices with a mobile application.",
+            ],
+            stack: ["Flutter", "Arduino", "ESP32", "IoT"],
+          },
+        ],
+        "volunteer",
       ),
       freelance: addIndexes(
         [
@@ -609,6 +753,7 @@ export const translations = {
           "Python",
           "Go",
           "TypeScript",
+          "SQL",
           "API Architecture",
           "System Design",
           "Microservices",
@@ -623,6 +768,7 @@ export const translations = {
           "Node.js",
           "Express",
           "REST",
+          "RabbitMQ",
           "API Integrations",
           "Authentication",
           "Access Control",
@@ -631,14 +777,25 @@ export const translations = {
         data: [
           "SQL Server",
           "PostgreSQL",
+          "MySQL",
           "MongoDB",
           "Redis",
+          "Pandas",
+          "Polars",
           "ETL",
           "CDC",
+          "Medallion Architecture",
           "Apache Airflow",
           "Data Modeling",
         ],
-        cloud: ["Docker", "AWS", "Azure", "Supabase", "Firebase", "CI/CD"],
+        cloud: [
+          "Docker",
+          "AWS (Lambda, API Gateway, SQS, S3, CloudFront)",
+          "Azure",
+          "Supabase",
+          "Firebase",
+          "CI/CD",
+        ],
         frontend: [
           "React",
           "Next.js",
@@ -652,9 +809,12 @@ export const translations = {
           "LangChain",
           "LangGraph",
           "Langfuse",
+          "Langflow",
           "RAG",
           "n8n",
           "Flowise",
+          "Copilot Studio",
+          "VBA",
           "AI Systems in Production",
         ],
       },

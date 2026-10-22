@@ -79,19 +79,23 @@ const ExperienceRow = ({ exp, id, isExpanded, onToggle, onOpenDiagram, viewDiagr
               <div className="hidden sm:block" aria-hidden />
               <div className="max-w-prose">
                 <p className="text-sm leading-relaxed text-[var(--text)]">{exp.summary}</p>
-                <ul className="mt-3 space-y-2">
-                  {exp.highlights.map((item) => (
-                    <li key={item} className="flex gap-3 text-sm leading-relaxed text-[var(--muted)]">
-                      <span className="mt-[0.6rem] h-px w-3 shrink-0 bg-[var(--line-strong)]" aria-hidden />
-                      <span>{item}</span>
-                    </li>
-                  ))}
-                </ul>
-                <div className="mt-5 flex flex-wrap gap-2">
-                  {exp.stack.map((tech) => (
-                    <span key={tech} className="chip">{tech}</span>
-                  ))}
-                </div>
+                {exp.highlights.length > 0 && (
+                  <ul className="mt-3 space-y-2">
+                    {exp.highlights.map((item) => (
+                      <li key={item} className="flex gap-3 text-sm leading-relaxed text-[var(--muted)]">
+                        <span className="mt-[0.6rem] h-px w-3 shrink-0 bg-[var(--line-strong)]" aria-hidden />
+                        <span>{item}</span>
+                      </li>
+                    ))}
+                  </ul>
+                )}
+                {exp.stack.length > 0 && (
+                  <div className="mt-5 flex flex-wrap gap-2">
+                    {exp.stack.map((tech) => (
+                      <span key={tech} className="chip">{tech}</span>
+                    ))}
+                  </div>
+                )}
                 {exp.miro && (
                   <button
                     onClick={onOpenDiagram}
@@ -120,9 +124,10 @@ export const Experience = () => {
 
   const employment = ([...t.experience.employment] as ExperienceItem[]).sort(byIndexDesc);
   const freelance = ([...t.experience.freelance] as ExperienceItem[]).sort(byIndexDesc);
+  const volunteer = ([...t.experience.volunteer] as ExperienceItem[]).sort(byIndexDesc);
 
   const selectedMiro = showDiagram
-    ? [...employment, ...freelance].find((exp) => exp.miro && showDiagram.endsWith(`-${exp.index}`))?.miro
+    ? [...employment, ...freelance, ...volunteer].find((exp) => exp.miro && showDiagram.endsWith(`-${exp.index}`))?.miro
     : undefined;
 
   const toggle = (id: string) => setExpandedId(prev => (prev === id ? null : id));
@@ -130,6 +135,7 @@ export const Experience = () => {
   const groups = [
     { key: 'employment', label: t.experience.employmentTitle, items: employment },
     { key: 'freelance', label: t.experience.freelanceTitle, items: freelance },
+    { key: 'volunteer', label: t.experience.volunteerTitle, items: volunteer },
   ];
 
   return (

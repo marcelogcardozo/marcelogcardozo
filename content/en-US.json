@@ -37,7 +37,7 @@
     "hero": {
       "name": "Marcelo Cardozo",
       "title": "Software Engineer",
-      "tagline": "I build end-to-end platforms, from data pipelines and APIs to interfaces and AI systems in production.",
+      "tagline": "I build robust, data-driven systems for financial markets, from pipelines and fixed income pricing to APIs, interfaces and AI solutions in production.",
       "scrollDown": "Scroll down"
     },
     "nav": {
@@ -53,22 +53,61 @@
     "title": "Professional Experience",
     "employmentTitle": "Employment",
     "freelanceTitle": "Freelance Projects",
+    "volunteerTitle": "Volunteering",
     "employmentLabel": "Employment",
     "freelanceLabel": "Freelance",
     "viewDiagram": "View Diagram",
     "closeDiagram": "Close diagram",
     "employment": [
       {
-        "index": 6,
-        "company": "Gino Terentim Business Development Academy",
-        "role": "Mid-Level Software Developer",
-        "period": "Oct/2025 — Present",
-        "summary": "Fullstack development of Pionira, a gamified educational platform with an AI tutor.",
+        "index": 8,
+        "company": "Maravi",
+        "role": "Systems Analyst | Fixed Income",
+        "period": "Sep/2026 — Present",
+        "summary": "Working in the Fixed Income Post-Trade vertical, focused on asset pricing.",
+        "highlights": [],
+        "stack": []
+      },
+      {
+        "index": 7,
+        "company": "BTG Pactual",
+        "role": "Assistant | Asset Servicing",
+        "period": "Jun/2026 — Sep/2026",
+        "summary": "Automation (Innovation) team, building software to automate, transform and sustain financial market processes, from new applications to the evolution of legacy systems.",
         "highlights": [
-          "Node.js/TypeScript backend on Express, deployed to Firebase Functions (stage) and containerized AWS Lambda (production).",
-          "JWT authentication and OpenAI Assistants API integration with response caching.",
-          "PDF certificate generation with Handlebars and a gamified shop system.",
-          "CI/CD pipelines with GitHub Actions, MongoDB/Mongoose, transactional emails via Brevo, and observability with Winston."
+          "End-to-end web applications with React + TypeScript on the frontend and FastAPI + AWS Lambda on the backend, using API Gateway, SQS, Aurora MySQL, S3 and CloudFront.",
+          "AI chatbot integrating Copilot Studio and AWS Lambda (LangChain), with Adaptive Cards interfaces and integration with Microsoft Teams and web applications.",
+          "Improvements and fixes to legacy applications, SharePoint, Pipefy and VBA/Excel automations, serving requests directly from business areas."
+        ],
+        "stack": [
+          "React",
+          "TypeScript",
+          "FastAPI",
+          "AWS Lambda",
+          "API Gateway",
+          "SQS",
+          "Aurora MySQL",
+          "S3",
+          "CloudFront",
+          "LangChain",
+          "Copilot Studio",
+          "Microsoft Teams",
+          "SharePoint",
+          "Pipefy",
+          "VBA"
+        ]
+      },
+      {
+        "index": 6,
+        "company": "Gino Terentim Professional Development",
+        "role": "Mid-Level Software Developer",
+        "period": "Oct/2025 — Jun/2026",
+        "summary": "Development of Pionira, a gamified educational platform with an African savanna theme (~1,600 users), and its satellite applications. Responsible for the product's architecture, technical execution and technology direction.",
+        "highlights": [
+          "“Safari” modular architecture, isolating each course in its own environment and enabling expansion to new products without rework. It now hosts the MBA in Strategic Value Management, the company's largest product.",
+          "Engagement system based on the Octalysis Framework: community, Q&A, ranking, streaks, XP, levels, rewards and skins for the Makena mascot.",
+          "Defined architecture, stack, coding standards and review processes, while prioritizing the backlog with stakeholders and providing technical support to users.",
+          "Node.js/TypeScript (Express) backend on containerized AWS Lambda and Firebase Functions, with MongoDB, JWT authentication, an AI tutor via the OpenAI Assistants API and CI/CD with GitHub Actions."
         ],
         "stack": [
           "Node.js",
@@ -90,20 +129,25 @@
       {
         "index": 2,
         "company": "Quantum Finance",
-        "role": "Data Intern → Data Analyst (Engineering Focus)",
+        "role": "Data Intern → Junior Data Analyst | Fixed Income",
         "period": "Jun/2021 — Sep/2025",
-        "summary": "Financial market data engineering, from collection to fixed income calculations.",
+        "summary": "Data engineering for fixed income, investment funds and indexes, from collection to pricing.",
         "highlights": [
-          "100+ financial data scrapers (APIs, HTML, PDFs, XML) and 30+ ETL pipelines with medallion architecture.",
-          "Migration from Rundeck to Apache Airflow, with dockerization, CI/CD on GitLab, and automation DAGs.",
-          "Change Data Capture (CDC) on SQL Server for traceability and consistency.",
-          "Interest rate curve modeling (Nelson-Siegel, cubic spline, flat-forward) and fixed income calculations (price, rate, Macaulay duration, %CDI, VNA).",
-          "Integration with B3, ANBIMA, IBGE, and CVM sources, plus a Python framework that abstracted database updates."
+          "100+ financial scrapers (APIs, HTML, PDF, XML) for ingesting and structuring market data.",
+          "20+ data pipelines (ETL) integrating scrapers with internal databases, scaled with a medallion architecture to improve performance and standardization across teams.",
+          "Data feed pipelines for the Portfolio Consolidator and the update flow for index and fund portfolios, integrating sources such as CVM, IBGE and ANBIMA.",
+          "Migration of routines from Rundeck to Airflow, including DAG design and refactoring of orchestration processes.",
+          "Yield curves with the Nelson-Siegel model and Newton-Raphson method for fixed income asset pricing, plus metric modules (term, price, rate, duration, dividend yield).",
+          "Reusable Python module that standardized database updates (Pandas/Polars + SQL Server), reducing upsert operations to 2 lines of code.",
+          "Automation of critical data update and validation routines, reducing operational time and manual errors.",
+          "Internal desktop interfaces for control, auditing and traceability of database changes."
         ],
         "stack": [
           "Python",
           "SQL Server",
           "Airflow",
+          "Pandas",
+          "Polars",
           "FastAPI",
           "ETL",
           "Docker",
@@ -113,18 +157,38 @@
       {
         "index": 0,
         "company": "Lab2M - LAMCE/COPPE/UFRJ",
-        "role": "Undergraduate Research Assistant",
+        "role": "Undergraduate Research Student",
         "period": "Jul/2019 — Apr/2023",
-        "summary": "Research in computational geophysics applied to seismic migration.",
+        "summary": "Numerical solutions in Python for 2D seismic simulation and migration, applying finite differences and high-performance computing with NumPy and Numba.",
         "highlights": [
-          "2D seismic migration simulators.",
-          "Interfaces for high-resolution geological model visualization."
+          "Acoustic wave equation models and seismic migration algorithms from seismograms.",
+          "Desktop application for visualizing and interpreting seismic data in SEG-Y format."
         ],
         "stack": [
           "Python",
+          "NumPy",
+          "Numba",
           "Numerical Modeling",
           "Visualization",
           "Geophysics"
+        ]
+      }
+    ],
+    "volunteer": [
+      {
+        "index": 1,
+        "company": "IEEE Robotics and Automation Society",
+        "role": "Volunteer",
+        "period": "Aug/2021 — Dec/2021",
+        "summary": "Automation and Robotics team, focused on IoT and embedded systems.",
+        "highlights": [
+          "Home Assistant MVP with Flutter, Arduino and ESP32, integrating sensors and embedded devices with a mobile application."
+        ],
+        "stack": [
+          "Flutter",
+          "Arduino",
+          "ESP32",
+          "IoT"
         ]
       }
     ],
@@ -245,6 +309,7 @@
           "Python",
           "Go",
           "TypeScript",
+          "SQL",
           "API Architecture",
           "System Design",
           "Microservices",
@@ -263,6 +328,7 @@
           "Node.js",
           "Express",
           "REST",
+          "RabbitMQ",
           "API Integrations",
           "Authentication",
           "Access Control",
@@ -275,10 +341,14 @@
         "items": [
           "SQL Server",
           "PostgreSQL",
+          "MySQL",
           "MongoDB",
           "Redis",
+          "Pandas",
+          "Polars",
           "ETL",
           "CDC",
+          "Medallion Architecture",
           "Apache Airflow",
           "Data Modeling"
         ]
@@ -286,12 +356,26 @@
       {
         "key": "cloud",
         "label": "Cloud & Infra",
-        "items": ["Docker", "AWS", "Azure", "Supabase", "Firebase", "CI/CD"]
+        "items": [
+          "Docker",
+          "AWS (Lambda, API Gateway, SQS, S3, CloudFront)",
+          "Azure",
+          "Supabase",
+          "Firebase",
+          "CI/CD"
+        ]
       },
       {
         "key": "frontend",
         "label": "Frontend",
-        "items": ["React", "Next.js", "TypeScript", "Tailwind CSS", "Vite", "Flutter"]
+        "items": [
+          "React",
+          "Next.js",
+          "TypeScript",
+          "Tailwind CSS",
+          "Vite",
+          "Flutter"
+        ]
       },
       {
         "key": "ai",
@@ -301,9 +385,12 @@
           "LangChain",
           "LangGraph",
           "Langfuse",
+          "Langflow",
           "RAG",
           "n8n",
           "Flowise",
+          "Copilot Studio",
+          "VBA",
           "AI Systems in Production"
         ]
       }
@@ -354,7 +441,7 @@
           "title": "Government Bonds Pricing Calculation",
           "provider": "FCE — Finance School",
           "year": "2024",
-          "url": "https://drive.google.com/file/d/1MHpiBQPmtx6_Irg_Y5mYpgec5Dw6MAX1/view?usp=sharing"
+          "url": "https://drive.google.com/file/d/1MHpiBQPmtx6_Irg_Y5mYpgec5Dw6MAX1/preview"
         },
         {
           "title": "Interest Rate Curve Interpolation",
